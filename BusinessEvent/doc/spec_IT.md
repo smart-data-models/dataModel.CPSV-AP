@@ -3,11 +3,14 @@
 ========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/BusinessEvent/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Questa classe rappresenta un Evento aziendale, che specializza l'Evento. Un Evento aziendale è una situazione o un evento specifico nel ciclo di vita di un'azienda che soddisfa una o più esigenze o obblighi (legali) di quell'azienda in un momento specifico. Un evento aziendale richiede l'erogazione e il consumo di una serie di servizi pubblici per soddisfare le esigenze o gli obblighi aziendali associati. Gli Eventi aziendali sono definiti nel contesto di un particolare Stato membro. In altre parole, un Evento commerciale raggruppa una serie di servizi pubblici che devono essere erogati per portare a termine quel particolare evento.**  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-Proprietà richieste  
-- Nessuna proprietà richiesta  ## Modello di dati descrizione delle proprietà  
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `eventType`: La proprietà type collega un evento a un vocabolario controllato di tipi di eventi ed è la natura di questi vocabolari controllati che costituisce la differenza principale tra un evento aziendale, come la creazione dell'azienda, e un evento di vita, come la nascita di un figlio.  - `id`: Identificatore univoco dell'entità  - `identifier`: Questa proprietà rappresenta un identificatore dell'evento.  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `relatedService`: Gamma: PublicService. Questa proprietà collega un evento direttamente a un servizio pubblico ad esso collegato.  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type`: Deve essere un BusinessEvent.    
+Proprietà richieste  
+- `id`  - `identifier`  - `name`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -344,10 +347,106 @@ BusinessEvent:
 ## Esempi di payload  
 #### Valori-chiave BusinessEvent NGSI-v2 Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "BusinessEvent",  
+  "identifier": "http://europa.eu/youreurope/businessOntology#start-grow",  
+  "name": "Start & grow",  
+  "eventType": [  
+    "Registering Intellectual Property"  
+  ],  
+  "description": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights.",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+  ]  
+}  
+```  
 #### BusinessEvent NGSI-v2 normalizzato Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "BusinessEvent",  
+  "identifier": {  
+    "type": "URL",  
+    "value": "http://europa.eu/youreurope/businessOntology#start-grow"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Start & grow"  
+  },  
+  "eventType": {  
+    "type": "array",  
+    "value": [  
+      "Registering Intellectual Property"  
+    ]  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights."  
+  },  
+  "relatedService": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+    ]  
+  }  
+}  
+```  
 #### BusinessEvent NGSI-LD valori-chiave Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "BusinessEvent",  
+  "identifier": "http://europa.eu/youreurope/businessOntology#start-grow",  
+  "name": "Start & grow",  
+  "eventType": [  
+    "Registering Intellectual Property"  
+  ],  
+  "description": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights.",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### BusinessEvent NGSI-LD normalizzato Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "BusinessEvent",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "http://europa.eu/youreurope/businessOntology#start-grow"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Start & grow"  
+  },  
+  "eventType": {  
+    "type": "Property",  
+    "value": [  
+      "Registering Intellectual Property"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights."  
+  },  
+  "relatedService": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
