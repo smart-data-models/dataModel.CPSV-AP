@@ -342,7 +342,7 @@ BusinessEvent:
 ```  
 </details>    
 ## Esempi di payload  
-#### Valori chiave BusinessEvent NGSI-v2 Esempio  
+#### Valori-chiave BusinessEvent NGSI-v2 Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
 #### BusinessEvent NGSI-v2 normalizzato Esempio  
 Ecco un esempio di BusinessEvent in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
