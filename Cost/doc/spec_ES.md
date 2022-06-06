@@ -3,11 +3,14 @@
 ==============  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Cost/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **La clase Coste representa cualquier coste relacionado con la ejecución de un Servicio Público que el Agente que lo consume necesita pagar.**  
+versión: 0.0.1  
 
 ## Lista de propiedades  
 
-Propiedades requeridas  
-- No hay propiedades requeridas  ## Descripción del modelo de datos de las propiedades  
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `currency`: Esta propiedad representa la moneda en la que debe pagarse el Coste y en la que se expresa su valor. Los posibles valores de esta propiedad se describen en un vocabulario controlado. Los vocabularios controlados recomendados figuran en la Lista de Autoridades Nombradas (NAL) de monedas de la Oficina Europea de Publicaciones, siguiendo la norma ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency).  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Esta propiedad representa una descripción de texto libre del Coste.  - `id`: Identificador único de la entidad  - `identifier`: Esta propiedad representa un identificador para el coste. Esta propiedad debe ser un URI si se modela en RDF.  - `ifAccessedThrough`: Rango:'Canal'. Si el coste varía en función del canal utilizado, por ejemplo, si se accede a través de un servicio en línea frente a un lugar físico, el coste puede vincularse al canal utilizando la propiedad "Si se accede a través de".  - `isDefinedBy`: Esta propiedad vincula la clase Coste con una o más instancias de la clase Organismo Público. Esta propiedad indica qué Organización Pública es la Autoridad Competente para definir los costes asociados a la prestación de un determinado Servicio Público.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tiene que ser Coste.  - `value`: Esta propiedad representa un valor numérico que indica el importe del Coste.    
+Propiedades requeridas  
+- `id`  - `identifier`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -326,10 +329,112 @@ Cost:
 ## Ejemplo de carga útil  
 #### Coste de los valores clave NGSI-v2 Ejemplo  
 Aquí hay un ejemplo de un Coste en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+  "value": 12.3,  
+  "currency": "EUR",  
+  "description": "Het wettigen van een handtekening is gratis.",  
+  "isDefinedBy": [  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+  ],  
+  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
+}  
+```  
 #### Coste NGSI-v2 normalizado Ejemplo  
 He aquí un ejemplo de un Coste en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": {  
+    "type": "URL",  
+    "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
+  },  
+  "value": {  
+    "type": "Number",  
+    "value": 12.3  
+  },  
+  "currency": {  
+    "type": "Text",  
+    "value": "EUR"  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "Het wettigen van een handtekening is gratis."  
+  },  
+  "isDefinedBy": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    ]  
+  },  
+  "ifAccessedThrough": {  
+    "type": "Text",  
+    "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
+  }  
+}  
+```  
 #### Coste de los valores clave NGSI-LD Ejemplo  
 Aquí hay un ejemplo de un Coste en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+  "value": 12.3,  
+  "currency": "EUR",  
+  "description": "Het wettigen van een handtekening is gratis.",  
+  "isDefinedBy": [  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+  ],  
+  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+   "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### Coste NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un Coste en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
+  },  
+  "value": {  
+    "type": "Property",  
+    "value": 12.3  
+  },  
+  "currency": {  
+    "type": "Property",  
+    "value": "EUR"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "Het wettigen van een handtekening is gratis."  
+  },  
+  "isDefinedBy": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    ]  
+  },  
+  "ifAccessedThrough": {  
+    "type": "Property",  
+    "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
+  },  
+   "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
