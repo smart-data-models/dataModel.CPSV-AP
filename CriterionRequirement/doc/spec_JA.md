@@ -3,11 +3,14 @@
 ==========================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/CriterionRequirement/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**すべての公共サービスが、すべての人に必要とされ、利用されているわけではありません。例えば、欧州各国が運営するビザサービスは欧州の市民には必要ないが、他の地域から来た一部の市民には必要であったり、失業手当や助成金を提供する公共サービスは特定の社会集団を対象としていたりする。CPSV はこのクラスについて、Core Criterion and Core Evidence Vocabulary (CCCEV - https://joinup.ec.europa.eu/release/core-criterion-and-core-evidence-vocabulary-v100)を再利用している。CCCEV にはより詳細な情報が記載されていますが、基準要件クラスには 3 つの必須プロパティがあります**。  
+バージョン: 0.0.1  
 
 ## プロパティ一覧  
 
-必要なプロパティ  
-- 必要なプロパティはありません  ## プロパティのデータモデル記述  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `criterionReqType`: このプロパティは、管理された語彙（TBC）で記述される基準要件のタイプを表す。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、基準要件の識別子を表す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: CriterionRequirementでなければならない。    
+必要なプロパティ  
+- `criterionReqType`  - `id`  - `identifier`  - `name`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -308,10 +311,82 @@ CriterionRequirement:
 ## ペイロードの例  
 #### CriterionRequirement NGSI-v2 key-value Example  
 以下は、CriterionRequirement を JSON-LD 形式で key-value にした例です。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+  "type": "CriterionRequirement",  
+  "identifier": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200",  
+  "name": "DEFAULT NAME",  
+  "criterionReqType": [  
+    "Holding a ticket",  
+    "Being older than eighteen"  
+  ]  
+}  
+```  
 #### 基準要件 NGSI-v2 正規化例  
 以下は、正規化された JSON-LD 形式の CriterionRequirement の例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+  "type": "CriterionRequirement",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "DEFAULT NAME"  
+  },  
+  "criterionReqType": {  
+    "type": "array",  
+    "value": [  
+      "Holding a ticket",  
+      "Being older than eighteen"  
+    ]  
+  }  
+}  
+```  
 #### 基準要件 NGSI-LD キー値 例  
 以下は、CriterionRequirement を JSON-LD 形式で key-value にした例です。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+  "type": "CriterionRequirement",  
+  "identifier": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200",  
+  "name": "DEFAULT NAME",  
+  "criterionReqType": [  
+    "Holding a ticket",  
+    "Being older than eighteen"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### 基準要件 NGSI-LD 正規化例  
 以下は、正規化された JSON-LD 形式の CriterionRequirement の例です。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+  "type": "CriterionRequirement",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "DEFAULT NAME"  
+  },  
+  "criterionReqType": {  
+    "type": "Property",  
+    "value": [  
+      "Holding a ticket",  
+      "Being older than eighteen"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
