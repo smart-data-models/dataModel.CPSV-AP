@@ -1,0 +1,19 @@
+{
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",
+  "type": "CriterionRequirement",
+  "identifier": {
+    "type": "Text",
+    "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"
+  },
+  "name": {
+    "type": "Text",
+    "value": "DEFAULT NAME"
+  },
+  "criterionReqType": {
+    "type": "array",
+    "value": [
+      "Holding a ticket",
+      "Being older than eighteen"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",
+  "type": "CriterionRequirement",
+  "identifier": {
+    "type": "Property",
+    "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"
+  },
+  "name": {
+    "type": "Property",
+    "value": "DEFAULT NAME"
+  },
+  "criterionReqType": {
+    "type": "Property",
+    "value": [
+      "Holding a ticket",
+      "Being older than eighteen"
+    ]
+  },
+  "@context": [
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"
+  ]
+}

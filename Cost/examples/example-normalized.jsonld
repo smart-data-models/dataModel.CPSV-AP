@@ -1,0 +1,34 @@
+{
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",
+  "type": "Cost",
+  "identifier": {
+    "type": "Property",
+    "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"
+  },
+  "value": {
+    "type": "Property",
+    "value": 12.3
+  },
+  "currency": {
+    "type": "Property",
+    "value": "EUR"
+  },
+  "description": {
+    "type": "Property",
+    "value": "Het wettigen van een handtekening is gratis."
+  },
+  "isDefinedBy": {
+    "type": "Relationship",
+    "value": [
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",
+      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"
+    ]
+  },
+  "ifAccessedThrough": {
+    "type": "Property",
+    "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"
+  },
+   "@context": [
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"
+  ]
+}
