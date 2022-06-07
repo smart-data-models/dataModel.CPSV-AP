@@ -1,0 +1,2 @@
+"id_", "type_", "identifier_", "name_", "criterionReqType__0_", "criterionReqType__1_"
+"urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200", "CriterionRequirement", "CriterionRequirementd70d5a06bbf3438fba6510f93544a200", "DEFAULT NAME", "Holding a ticket", "Being older than eighteen"
