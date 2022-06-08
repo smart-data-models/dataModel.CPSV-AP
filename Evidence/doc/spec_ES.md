@@ -3,11 +3,14 @@
 ================  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descripción global: **La clase Evidencia se define en el vocabulario de Criterios Básicos y Evidencias Básicas (CCCEV) como cualquier recurso que puede documentar o apoyar una respuesta de criterio. Contiene información que demuestra que un requisito del criterio existe o es verdadero, en particular las evidencias se utilizan para demostrar que se cumple un criterio específico. Aunque la redacción de la definición es diferente, la semántica coincide exactamente con la clase Input de CPSV, a la que sustituye. Las pruebas pueden ser cualquier recurso -documento, artefacto-, cualquier cosa necesaria para ejecutar el Servicio Público. En el contexto de los servicios públicos, las pruebas suelen ser documentos administrativos o formularios de solicitud cumplimentados. Un Servicio Público específico puede requerir la presencia de ciertas Pruebas o combinaciones de Pruebas para poder ser entregado. En algunos casos, el resultado de un servicio será una prueba para otro servicio. Estas relaciones deben describirse en la(s) norma(s) asociada(s).**  
+versión: 0.0.1  
 
 ## Lista de propiedades  
 
-Propiedades requeridas  
-- No hay propiedades requeridas  ## Descripción del modelo de datos de las propiedades  
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `evidenceType`: Esta propiedad representa el tipo de Prueba tal y como se describe en un vocabulario controlado.  - `id`: Identificador único de la entidad  - `identifier`: Esta propiedad representa un identificador para el elemento de prueba.  - `language`: Esta propiedad representa la(s) lengua(s) en la(s) que está disponible la Prueba. Puede ser una o varias lenguas, por ejemplo en países con más de una lengua oficial. Los posibles valores de esta propiedad se describen en un vocabulario controlado. Lista de Autoridades Nombradas (NAL) de la Oficina Europea de Publicaciones, http://publications.europa.eu/mdr/authority/language/index.html  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `relatedDocumentation`: Esta propiedad representa la documentación que contiene información relacionada con las Pruebas, por ejemplo una plantilla particular para un documento administrativo, una aplicación o una guía sobre el formato de la Entrada.  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tiene que ser una prueba.    
+Propiedades requeridas  
+- `id`  - `identifier`  - `name`  - `type`  ## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -316,17 +319,128 @@ Evidence:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Evidence/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## Ejemplo de carga útil  
 #### Evidence NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de una Evidencia en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ]  
+}  
+```  
 #### Pruebas NGSI-v2 normalizadas Ejemplo  
 Aquí hay un ejemplo de una Evidencia en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Text",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "array",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  }  
+}  
+```  
 #### Evidence NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de una Evidencia en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### Pruebas NGSI-LD normalizadas Ejemplo  
 Aquí hay un ejemplo de una Evidencia en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Property",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "Property",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "Property",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+El tipo de propiedad, cuyo URI es dct:type en la especificación CPSV-AP v2.2.1 se traduce a evidenceType para resolver la ambigüedad con el tipo de propiedad del contexto central de ETSI NGSI-LD.  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
