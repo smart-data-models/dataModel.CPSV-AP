@@ -3,11 +3,14 @@
 =================  
 [Open License](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/LifeEvent/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Global description: **The Life Event class represents an important event or situations in a citizen's life where public services may be required. Note the scope: an individual will encounter any number of 'events' in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related. For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.**  
+version: 0.0.1  
 
 ## List of properties  
 
-Required properties  
-- No required properties  ## Data Model description of properties  
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `eventType`: The type property links an Event to a controlled vocabulary of event types and it is the nature of those controlled vocabularies that is the major difference between a business event, such as creating the business in the first place and a life event, such as the birth of a child. The suggested controlled vocabulary was based on an analysis done.  - `id`: Unique identifier of the entity  - `identifier`: This property represents an Identifier for the Event.  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedService`: Range: PublicService. This property links an event directly to a public service that is related to it.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: It has to be LifeEvent.    
+Required properties  
+- `id`  - `identifier`  - `name`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -328,21 +331,122 @@ LifeEvent:
     - identifier    
     - name    
   type: object    
-  x-derived-from: Event    
+  x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/LifeEvent/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/LifeEvent/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
 #### LifeEvent NGSI-v2 key-values Example    
 Here is an example of a LifeEvent in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78",  
+  "name": "Life Event in the city",  
+  "eventType": [  
+    "Starting education"  
+  ],  
+  "description": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and university…",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+  ]  
+}  
+```  
 #### LifeEvent NGSI-v2 normalized Example    
 Here is an example of a LifeEvent in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Life Event in the city"  
+  },  
+  "eventType": {  
+    "type": "array",  
+    "value": [  
+      "Starting education"  
+    ]  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and university…"  
+  },  
+  "relatedService": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+    ]  
+  }  
+}  
+```  
 #### LifeEvent NGSI-LD key-values Example    
 Here is an example of a LifeEvent in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78",  
+  "name": "Life Event in the city",  
+  "eventType": [  
+    "Starting education"  
+  ],  
+  "description": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and universityâ€¦",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### LifeEvent NGSI-LD normalized Example    
 Here is an example of a LifeEvent in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Life Event in the city"  
+  },  
+  "eventType": {  
+    "type": "Property",  
+    "value": [  
+      "Starting education"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and universityâ€¦"  
+  },  
+  "relatedService": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+The property type, whose URI is dct:type in the CPSV-AP v2.2.1 specification is translated to eventType to resolve ambiguity with property type from ETSI NGSI-LD core context.  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
