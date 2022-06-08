@@ -3,11 +3,14 @@
 =============  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/LifeEvent/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**ライフイベントクラスは、公共サービスが必要とされるかもしれない、市民の生活における重要なイベントまたは状況を表す。この範囲に注意：個人は、一般的な意味での「イベント」にいくつでも遭遇することができる。CPSV-AP のコンテキストでは、ライフイベントクラスは、公共サービスが関連するイベントのみを表 示する。例えば、カップルが婚約することは CPSV-AP ライフイベントではなく、結婚することであり、後者のみが公共サービスとの関連性を持つからである**。  
+バージョン: 0.0.1  
 
 ## プロパティ一覧  
 
-必要なプロパティ  
-- 必要なプロパティはありません  ## プロパティのデータモデル記述  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `eventType`: type プロパティは Event をイベントタイプの管理された語彙にリンクし、それらの管理された語彙の性質が、最初にビジネスを作成するようなビジネスイベントと子供の誕生のようなライフイベントの大きな違いとなっています。提案されたコントロールボキャブラリーは、行われた分析に基づいています。  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、イベントの識別子を表す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedService`: 範囲PublicService。このプロパティは、イベントをそれに関連する公共サービスに直接リンクする。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: LifeEventでなければならない。    
+必要なプロパティ  
+- `id`  - `identifier`  - `name`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -328,21 +331,122 @@ LifeEvent:
     - identifier    
     - name    
   type: object    
-  x-derived-from: Event    
+  x-derived-from: ""    
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/LifeEvent/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/LifeEvent/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
 #### LifeEvent NGSI-v2 key-value の例。  
 以下は、LifeEventをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78",  
+  "name": "Life Event in the city",  
+  "eventType": [  
+    "Starting education"  
+  ],  
+  "description": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and university…",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+  ]  
+}  
+```  
 #### LifeEvent NGSI-v2 正規化例  
 以下は、正規化された JSON-LD 形式の LifeEvent の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Life Event in the city"  
+  },  
+  "eventType": {  
+    "type": "array",  
+    "value": [  
+      "Starting education"  
+    ]  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and university…"  
+  },  
+  "relatedService": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+    ]  
+  }  
+}  
+```  
 #### ライフイベント NGSI-LD キー値例  
 以下は、LifeEventをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用したときに NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78",  
+  "name": "Life Event in the city",  
+  "eventType": [  
+    "Starting education"  
+  ],  
+  "description": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and universityâ€¦",  
+  "relatedService": [  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### ライフイベント NGSI-LD 正規化例  
 以下は、正規化された JSON-LD 形式の LifeEvent の例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:LifeEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+  "type": "LifeEvent",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "http://cefat4cities.crosslang.com/content/LifeEvent0e1037aafacc4fc39ee14d3c4391cc78"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Life Event in the city"  
+  },  
+  "eventType": {  
+    "type": "Property",  
+    "value": [  
+      "Starting education"  
+    ]  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "This life event groups any public service related to education, for example pre-school education, elementary school, higher education and universityâ€¦"  
+  },  
+  "relatedService": {  
+    "type": "Property",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0ddad5",  
+      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-5a3e-2d9a-8371-81c6ad0ddad5"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+CPSV-AP v2.2.1 仕様では dct:type であるプロパティタイプは、ETSI NGSI-LD コ アコンテキストからのプロパティタイプとの曖昧さを解消するために eventType に変換されている。  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
