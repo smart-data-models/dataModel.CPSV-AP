@@ -3,11 +3,14 @@
 ===========  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**Evidence クラスは、CCCEV（Core Criterion and Core Evidence vocabulary）において、基準応答を文書化または支援することができるあらゆるリソースとして定義されている。基準要件が存在するか、または真であることを証明する情報を含み、特にエビデンスは特定の基準が満たされていることを証明するために使用される。定義の文言は異なるが、意味的にはCPSVのInputクラスと完全に一致し、これを置き換える。エビデンスは、文書、人工物など、公共サービスの実行に必要なあらゆるリソースとなり得る。公共サービスの文脈では、証拠は通常、行政文書や記入済み申請書である。特定の公共サービスを提供するために、特定のエビデンスまたはエビデンスの組み合 わせが必要な場合がある。また、あるサービスのアウトプットが、別のサービスのエビデンスとなる場合もある。このような関係は、関連する規則で記述されるべきである**。  
+バージョン: 0.0.1  
 
 ## プロパティ一覧  
 
-必要なプロパティ  
-- 必要なプロパティはありません  ## プロパティのデータモデル記述  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `evidenceType`: このプロパティは、制御された語彙で記述されるEvidenceのタイプを表す。  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、証拠品の識別子を表す。  - `language`: このプロパティは、Evidence が利用可能な言語を表す。これは 1 つまたは複数の言語であり、例えば複数の公用語を持つ国で使用される。このプロパティに指定できる値は、管理された語彙で説明されている。欧州出版局の言語名称付き権威リスト（NAL）、http://publications.europa.eu/mdr/authority/language/index.html。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedDocumentation`: このプロパティは、例えば、行政文書の特定のテンプレート、アプリケーション、入力の書式設定に関するガイドなど、Evidenceに関連する情報を含む文書を表します。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: それはEvidenceでなければならない。    
+必要なプロパティ  
+- `id`  - `identifier`  - `name`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -316,17 +319,128 @@ Evidence:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Evidence/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
 #### Evidence NGSI-v2 key-value 例．  
 ここでは、EvidenceをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータが返される。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ]  
+}  
+```  
 #### 証拠 NGSI-v2 正規化例  
 以下は、JSON-LD 形式の Evidence を正規化した例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Text",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "array",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  }  
+}  
+```  
 #### 証拠となるNGSI-LDのキー値 例  
 ここでは、EvidenceをJSON-LD形式でkey-valuesとした例を示す。これは `options=keyValues` を用いた場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### 証拠 NGSI-LD正規化例  
 以下は、JSON-LD 形式の Evidence を正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Property",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "Property",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "Property",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+CPSV-AP v2.2.1 仕様では dct:type であるプロパティタイプは、ETSI NGSI-LD コアコンテキストのプロパティタイプとの曖昧さを解消するために evidenceType に変換されている。  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
