@@ -3,11 +3,14 @@
 =============================  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/PublicOrganization/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+グローバルな記述です。**CPSV-AP は、公共組織の概念および関連するプロパティと関係を定義した Core Public Organization Vocabulary (https://joinup.ec.europa.eu/asset/cpov/asset_release/all) を再利用しています。これは主にW3C Organization Ontology (http://www.w3.org/TR/vocab-org)に基づいています**。  
+バージョン: 0.0.1  
 
 ## プロパティ一覧  
 
-必要なプロパティ  
-- 必要なプロパティはありません  ## プロパティのデータモデル記述  
+- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `id`: エンティティの一意な識別子  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `preferredLabel`: このプロパティは、公共サービスに対して正式に発行された Identifier を表す。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `spatial`: この値は，出版局のメタデータレジストリで管理されている行政区域単位（http://publications.europa.eu/mdr/authority/atu） の名前付き権威リストのURIでなければならない。  - `type`: PublicOrganizationである必要があります。    
+必要なプロパティ  
+- `id`  - `preferredLabel`  - `spatial`  - `type`  ## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -300,17 +303,75 @@ PublicOrganization:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/PublicOrganization/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/PublicOrganization/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## ペイロードの例  
 #### PublicOrganization NGSI-v2 key-value の例。  
 ここでは、PublicOrganizationをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": "The Finnish Patent and Registration Office",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ]  
+}  
+```  
 #### PublicOrganization NGSI-v2 正規化例  
 以下は、PublicOrganization を JSON-LD 形式で正規化した例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": {  
+    "type": "string",  
+    "value": "The Finnish Patent and Registration Office"  
+  },  
+  "spatial": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  }  
+}  
+```  
 #### PublicOrganization NGSI-LD キー値の例  
 ここでは、PublicOrganizationをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": "The Finnish Patent and Registration Office",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### PublicOrganization NGSI-LD 正規化例  
 以下は、PublicOrganization を JSON-LD 形式で正規化した例です。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": {  
+    "type": "string",  
+    "value": "The Finnish Patent and Registration Office"  
+  },  
+  "spatial": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
