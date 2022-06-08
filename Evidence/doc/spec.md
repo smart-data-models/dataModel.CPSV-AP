@@ -3,11 +3,14 @@
 ================  
 [Open License](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Global description: **The Evidence class is defined in the Core Criterion and Core Evidence vocabulary (CCCEV) as any resource that can document or support a criterion response. It contains information that proves that a criterion requirement exists or is true, in particular evidences are used to prove that a specific criterion is met. Although the wording of the definition is different, the semantics are an exact match for CPSV's Input class which it replaces. Evidence can be any resource - document, artefact – anything needed for executing the Public Service. In the context of Public Services, Evidence is usually administrative documents or completed application forms. A specific Public Service may require the presence of certain Evidence or combinations of Evidence in order to be delivered. In some cases, the Output of one service will be Evidence for another service. Such relationships should be described in the associated Rule(s).**  
+version: 0.0.1  
 
 ## List of properties  
 
-Required properties  
-- No required properties  ## Data Model description of properties  
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `areaServed`: The geographic area where a service or offered item is provided  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `evidenceType`: This property represents the type of Evidence as described in a controlled vocabulary.  - `id`: Unique identifier of the entity  - `identifier`: This property represents an Identifier for the piece of Evidence.  - `language`: This property represents the language(s) in which the Evidence is available. This could be one or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. European Publications Office's Languages Named Authority List (NAL), http://publications.europa.eu/mdr/authority/language/index.html  - `location`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `relatedDocumentation`: This property represents documentation that contains information related to the Evidence, for instance a particular template for an administrative document, an application or a guide on formatting the Input.  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: It has to be Evidence.    
+Required properties  
+- `id`  - `identifier`  - `name`  - `type`  ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -316,17 +319,128 @@ Evidence:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Evidence/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Evidence/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## Example payloads    
 #### Evidence NGSI-v2 key-values Example    
 Here is an example of a Evidence in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ]  
+}  
+```  
 #### Evidence NGSI-v2 normalized Example    
 Here is an example of a Evidence in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Text",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "array",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  }  
+}  
+```  
 #### Evidence NGSI-LD key-values Example    
 Here is an example of a Evidence in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": "https://www.prh.fi/input/form",  
+  "name": "Form to apply for a trademark",  
+  "description": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person.",  
+  "evidenceType": "Declaration of Oath",  
+  "relatedDocumentation": [  
+    "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/FIN",  
+    "http://publications.europa.eu/resource/authority/language/SWE"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### Evidence NGSI-LD normalized Example    
 Here is an example of a Evidence in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:Evidence:5eafa833-6dba-430d-b2f0-64379ee20b94",  
+  "type": "Evidence",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "https://www.prh.fi/input/form"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Form to apply for a trademark"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "The application must include the applicant's name or company name, domicile or registered office and address. A trademark can be applied for by either a company, an organization or a private person."  
+  },  
+  "evidenceType": {  
+    "type": "Property",  
+    "value": "Declaration of Oath"  
+  },  
+  "relatedDocumentation": {  
+    "type": "Property",  
+    "value": [  
+      "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"  
+    ]  
+  },  
+  "language": {  
+    "type": "Property",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/FIN",  
+      "http://publications.europa.eu/resource/authority/language/SWE"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+The property type, whose URI is dct:type in the CPSV-AP v2.2.1 specification is translated to evidenceType to resolve ambiguity with property type from ETSI NGSI-LD core context.  
 See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
