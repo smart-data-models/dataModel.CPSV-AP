@@ -3,9 +3,9 @@
   "$schemaVersion": "0.0.1",
   "$id": "https://smart-data-models.github.io/dataModel.CPSV-AP/LifeEvent/schema.json",
   "title": "Smart Data models - LifeEvent schema",
-  "modelTags": "CEFAT4CIIES",
+  "modelTags": "CEFAT4CITIES",
   "description": "The Life Event class represents an important event or situations in a citizen's life where public services may be required. Note the scope: an individual will encounter any number of 'events' in the general sense of the word. In the context of the CPSV-AP, the Life Event class only represents an event for which a Public Service is related. For example, a couple becoming engaged is not a CPSV-AP Life Event, getting married is, since only the latter has any relevance to public services.",
-  "derivedFrom": "Event",
+  "derivedFrom": "",
   "license": "",
   "type": "object",
   "required": [
