@@ -1,4 +1,5 @@
 # dataModel.CPSV-AP
+These data models are mapped from [CPSV-AP v.2.2.1](https://ec.europa.eu/isa2/solutions/core-public-service-vocabulary-application-profile-cpsv-ap_en) standard.
 
 ### List of data models
 
