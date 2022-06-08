@@ -3,11 +3,14 @@
 =========================  
 [Licenza aperta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/PublicService/LICENSE.md)  
 [documento generato automaticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Descrizione globale: **Un servizio pubblico è un insieme di attività obbligatorie o discrezionali svolte, o che possono essere svolte, da o per conto di un'organizzazione pubblica, finanziate con fondi pubblici e derivanti da politiche pubbliche **.  
+versione: 0.0.1  
 
 ## Elenco delle proprietà  
 
-Proprietà richieste  
-- Nessuna proprietà richiesta  ## Modello di dati descrizione delle proprietà  
+- `address`: L'indirizzo postale  - `alternateName`: Un nome alternativo per questa voce  - `areaServed`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  - `dataProvider`: Una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata.  - `dateCreated`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `dateModified`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione.  - `description`: Descrizione dell'articolo  - `follows`: La proprietà follows collega un Servizio pubblico alla/e Regola/e in base alla quale opera. La definizione della classe Rule è molto ampia. In un caso tipico, l'autorità competente che fornisce il servizio pubblico definirà anche le regole che implementeranno le proprie politiche. Il CPSV-AP è flessibile per consentire variazioni significative in questo scenario.  - `hasCompetentAuthority`: Questa proprietà collega un servizio pubblico a un'organizzazione pubblica, che è l'agente responsabile dell'erogazione del servizio pubblico. Non è rilevante se la particolare organizzazione pubblica fornisce il servizio pubblico direttamente o lo esternalizza. L'Organizzazione pubblica che è l'Autorità competente per il servizio è quella che ha la responsabilità finale di gestire e fornire il servizio pubblico. Il termine Autorità competente è definito nella Direttiva Servizi (2006/123/CE) nel modo seguente: "qualsiasi organismo o autorità che in uno Stato membro abbia un ruolo di vigilanza o di regolamentazione in relazione alle attività di servizio, comprese, in particolare, le autorità amministrative, compresi i tribunali che agiscono in quanto tali, gli ordini professionali e le associazioni o altre organizzazioni professionali che, nell'esercizio della loro autonomia giuridica, disciplinano in modo collettivo l'accesso alle attività di servizio o il loro esercizio".  - `hasContactPoint`: Un punto di contatto per il servizio è quasi sempre utile. Il valore di questa proprietà, ovvero le informazioni di contatto, deve essere fornito utilizzando schema:ContactPoint. Si noti che le informazioni di contatto devono essere pertinenti al Servizio pubblico, il che può non coincidere con le informazioni di contatto per l'Autorità competente o per qualsiasi partecipante.  - `hasCost`: La proprietà Has Cost collega un Servizio pubblico a una o più istanze della classe Cost. Indica i costi relativi all'esecuzione di un Servizio pubblico per il cittadino o l'azienda che ha a che fare con l'esecuzione di quel particolare Servizio pubblico. Se il costo varia a seconda del canale attraverso il quale si accede al servizio, può essere collegato al canale utilizzando la relazione If Accessed Through.  - `hasCriterion`: Collega un servizio pubblico a una classe che descrive i criteri per la necessità o l'utilizzo del servizio, come la residenza in un determinato luogo, l'età superiore a una certa età, ecc. La classe Criterio è definita nel Vocabolario dei criteri e delle evidenze principali (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary).  - `hasInput`: La proprietà Has Input collega un Servizio pubblico a una o più istanze della classe Evidence. Un servizio pubblico specifico può richiedere la presenza di determinate prove per essere erogato. Se le evidenze richieste per utilizzare un servizio variano a seconda del canale attraverso il quale si accede al servizio, allora Has Input deve essere al livello del canale.  - `id`: Identificatore univoco dell'entità  - `identifier`: Questa proprietà rappresenta un identificativo formalmente rilasciato per il Servizio pubblico.  - `isGroupedBy`: Questa proprietà collega il Servizio pubblico all'Evento. A un determinato Evento possono essere associati più Servizi pubblici e, allo stesso modo, lo stesso Servizio pubblico può essere associato a più Eventi diversi.  - `keyword`: Questa proprietà rappresenta una parola chiave, un termine o una frase per descrivere il Servizio pubblico.  - `language`: Questa proprietà rappresenta la lingua o le lingue in cui è disponibile il Servizio pubblico. Può trattarsi di una lingua o di più lingue, ad esempio nei Paesi con più lingue ufficiali. I valori possibili per questa proprietà sono descritti in un vocabolario controllato (Languages Named Authority List (NAL) dell'Ufficio delle pubblicazioni europee),  - `location`: Riferimento Geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name`: Il nome di questo elemento.  - `owner`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `processingTime`: Il valore di questa proprietà è il tempo (stimato) necessario per l'esecuzione di un Servizio pubblico. Le informazioni effettive sono fornite utilizzando la sintassi ISO8601 per le durate. Esempi: [5 anni -> P5Y, 1 mese -> P1M, 3 giorni -> P3D, 2 giorni e 4 ore -> P2DT4H].  - `publicServiceType`: Questa proprietà rappresenta il tipo di servizio pubblico descritto in un vocabolario controllato. Per indicare il Tipo, si fa riferimento alle funzioni di governo per indicare lo scopo di un'attività di governo, a cui il servizio pubblico è destinato.  - `sector`: Questa proprietà rappresenta l'industria o il settore a cui un Servizio pubblico si riferisce o è destinato. Ad esempio: ambiente, sicurezza, alloggi. Si noti che un singolo Servizio pubblico può riguardare più settori. I valori possibili per questa proprietà sono forniti come vocabolario controllato (Elenco dei codici NACE:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html).  - `seeAlso`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `spatial`: I valori possibili per questa proprietà sono forniti come vocabolario controllato (MDR Continents Named Authority List , MDR Countries Named Authority List, MDR Places Named Authority List, Geonames: http://sws.geonames.org).  - `status`: Indica se un servizio pubblico è attivo, inattivo, in fase di sviluppo, ecc. secondo un vocabolario controllato (ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf).  - `thematicArea`: Questa proprietà rappresenta l'area tematica di un servizio pubblico come descritto in un vocabolario controllato, ad esempio protezione sociale, salute, ricreazione, cultura e religione, famiglia, affari economici itineranti, tasse, personale, ambiente...  - `type`: Deve essere un servizio pubblico.    
+Proprietà richieste  
+- `description`  - `hasCompetentAuthority`  - `id`  - `identifier`  - `name`  - `type`  ## Modello di dati descrizione delle proprietà  
 Ordinati in ordine alfabetico (clicca per i dettagli)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -486,10 +489,386 @@ PublicService:
 ## Esempi di payload  
 #### PublicService NGSI-v2 valori-chiave Esempio  
 Ecco un esempio di un PublicService in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-v2 quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicService",  
+  "identifier": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki",  
+  "name": "Electronic application for a trademark",  
+  "description": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years.",  
+  "keyword": [  
+  ],  
+  "sector": [  
+    "A1.1.5",  
+    "A1.1.6",  
+    "A1.1.9"  
+  ],  
+  "thematicArea": [  
+    "social",  
+    "protection",  
+    "health",  
+    "recreation",  
+    "culture and religion",  
+    "family",  
+    "traveling",  
+    "economic",  
+    "affairs",  
+    "tax",  
+    "staff",  
+    "environment"  
+  ],  
+  "publicServiceType": [  
+    "Public Service"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/ENG"  
+  ],  
+  "status": "UnderDevelopment",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ],  
+  "processingTime": "P2Y9M5DT6H5M20S",  
+  "isGroupedBy": [  
+    "http://europa.eu/youreurope/businessOntology#start-grow"  
+  ],  
+  "hasCriterion": [  
+    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+  ],  
+  "hasCompetentAuthority": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362",  
+  "hasInput": [  
+    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "follows": [  
+    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "hasContactPoint": [  
+    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "hasCost": [  
+    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ]  
+}  
+```  
 #### PublicService NGSI-v2 normalizzato Esempio  
 Ecco un esempio di un PublicService in formato JSON-LD normalizzato. Questo è compatibile con NGSI-v2 quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicService",  
+  "identifier": {  
+    "type": "Text",  
+    "value": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"  
+  },  
+  "name": {  
+    "type": "Text",  
+    "value": "Electronic application for a trademark"  
+  },  
+  "description": {  
+    "type": "Text",  
+    "value": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years."  
+  },  
+  "keyword": {  
+    "type": "array",  
+    "value": []  
+  },  
+  "sector": {  
+    "type": "array",  
+    "value": [  
+      "A1.1.5",  
+      "A1.1.6",  
+      "A1.1.9"  
+    ]  
+  },  
+  "thematicArea": {  
+    "type": "array",  
+    "value": [  
+      "social",  
+      "protection",  
+      "health",  
+      "recreation",  
+      "culture and religion",  
+      "family",  
+      "traveling",  
+      "economic",  
+      "affairs",  
+      "tax",  
+      "staff",  
+      "environment"  
+    ]  
+  },  
+  "publicServiceType": {  
+    "type": "array",  
+    "value": [  
+      "Public Service"  
+    ]  
+  },  
+  "language": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/ENG"  
+    ]  
+  },  
+  "status": {  
+    "type": "Text",  
+    "value": "UnderDevelopment"  
+  },  
+  "spatial": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  },  
+  "processingTime": {  
+    "type": "Date-Time",  
+    "value": "P2Y9M5DT6H5M20S"  
+  },  
+  "isGroupedBy": {  
+    "type": "array",  
+    "value": [  
+      "http://europa.eu/youreurope/businessOntology#start-grow"  
+    ]  
+  },  
+  "hasCriterion": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+    ]  
+  },  
+  "hasCompetentAuthority": {  
+    "type": "URI",  
+    "value": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362"  
+  },  
+  "hasInput": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "follows": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "hasContactPoint": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "hasCost": {  
+    "type": "array",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  }  
+}  
+```  
 #### PublicService Valori chiave NGSI-LD Esempio  
 Ecco un esempio di un PublicService in formato JSON-LD come valori-chiave. Questo è compatibile con NGSI-LD quando si usa `options=keyValues` e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicService",  
+  "identifier": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki",  
+  "name": "Electronic application for a trademark",  
+  "description": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years.",  
+  "keyword": [  
+  ],  
+  "sector": [  
+    "A1.1.5",  
+    "A1.1.6",  
+    "A1.1.9"  
+  ],  
+  "thematicArea": [  
+    "social",  
+    "protection",  
+    "health",  
+    "recreation",  
+    "culture and religion",  
+    "family",  
+    "traveling",  
+    "economic",  
+    "affairs",  
+    "tax",  
+    "staff",  
+    "environment"  
+  ],  
+  "publicServiceType": [  
+    "Public Service"  
+  ],  
+  "language": [  
+    "http://publications.europa.eu/resource/authority/language/ENG"  
+  ],  
+  "status": "UnderDevelopment",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ],  
+  "processingTime": "P2Y9M5DT6H5M20S",  
+  "isGroupedBy": [  
+    "http://europa.eu/youreurope/businessOntology#start-grow"  
+  ],  
+  "hasCriterion": [  
+    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+  ],  
+  "hasCompetentAuthority": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362",  
+  "hasInput": [  
+    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "follows": [  
+    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "hasContactPoint": [  
+    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "hasCost": [  
+    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### Servizio Pubblico NGSI-LD normalizzato Esempio  
 Ecco un esempio di un PublicService in formato JSON-LD normalizzato. Questo è compatibile con NGSI-LD quando non si utilizzano opzioni e restituisce i dati di contesto di una singola entità.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicService",  
+  "identifier": {  
+    "type": "Property",  
+    "value": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"  
+  },  
+  "name": {  
+    "type": "Property",  
+    "value": "Electronic application for a trademark"  
+  },  
+  "description": {  
+    "type": "Property",  
+    "value": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years."  
+  },  
+  "keyword": {  
+    "type": "Property",  
+    "value": []  
+  },  
+  "sector": {  
+    "type": "Property",  
+    "value": [  
+      "A1.1.5",  
+      "A1.1.6",  
+      "A1.1.9"  
+    ]  
+  },  
+  "thematicArea": {  
+    "type": "Property",  
+    "value": [  
+      "social",  
+      "protection",  
+      "health",  
+      "recreation",  
+      "culture and religion",  
+      "family",  
+      "traveling",  
+      "economic",  
+      "affairs",  
+      "tax",  
+      "staff",  
+      "environment"  
+    ]  
+  },  
+  "publicServiceType": {  
+    "type": "Property",  
+    "value": [  
+      "Public Service"  
+    ]  
+  },  
+  "language": {  
+    "type": "Property",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/language/ENG"  
+    ]  
+  },  
+  "status": {  
+    "type": "Property",  
+    "value": "UnderDevelopment"  
+  },  
+  "spatial": {  
+    "type": "Property",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  },  
+  "processingTime": {  
+    "type": "Property",  
+    "value": {  
+      "@type": "Date-time",  
+      "@value": "P2Y9M5DT6H5M20S"  
+    }  
+  },  
+  "isGroupedBy": {  
+    "type": "Relationship",  
+    "value": [  
+      "http://europa.eu/youreurope/businessOntology#start-grow"  
+    ]  
+  },  
+  "hasCriterion": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+    ]  
+  },  
+  "hasCompetentAuthority": {  
+    "type": "Relationship",  
+    "value": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362"  
+  },  
+  "hasInput": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "follows": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "hasContactPoint": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "hasCost": {  
+    "type": "Relationship",  
+    "value": [  
+      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
+Il tipo di proprietà, il cui URI è dct:type nella specifica CPSV-AP v2.2.1, è tradotto in publicServiceType per risolvere l'ambiguità con il tipo di proprietà del contesto ETSI NGSI-LD core.  
 Vedere [FAQ 10](https://smartdatamodels.org/index.php/faqs/) per ottenere una risposta su come gestire le unità di grandezza.  
