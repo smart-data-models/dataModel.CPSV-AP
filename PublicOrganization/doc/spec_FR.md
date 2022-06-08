@@ -3,11 +3,14 @@
 ===========================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/PublicOrganization/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Description globale : **Le CPSV-AP réutilise le Core Public Organization Vocabulary (https://joinup.ec.europa.eu/asset/cpov/asset_release/all) qui définit le concept d'organisation publique et les propriétés et relations associées. Il est largement basé sur l'ontologie d'organisation du W3C (http://www.w3.org/TR/vocab-org).**  
+version : 0.0.1  
 
 ## Liste des propriétés  
 
-Propriétés requises  
-- Aucune propriété requise  ## Description des propriétés du modèle de données  
+- `address`: L'adresse postale  - `alternateName`: Un nom alternatif pour cet élément  - `areaServed`: La zone géographique où un service ou un article offert est fourni  - `dataProvider`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated`: Horodatage de la création de l'entité. Celui-ci sera généralement attribué par la plateforme de stockage.  - `dateModified`: Horodatage de la dernière modification de l'entité. Il sera généralement attribué par la plateforme de stockage.  - `description`: Une description de cet article  - `id`: Identifiant unique de l'entité  - `location`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une ligne, d'un polygone, d'un point multiple, d'une ligne multiple ou d'un polygone multiple.  - `name`: Le nom de cet élément.  - `owner`: Une liste contenant une séquence de caractères codée en JSON référençant les identifiants uniques du ou des propriétaires.  - `preferredLabel`: Cette propriété représente un identifiant officiellement délivré pour le service public.  - `seeAlso`: liste d'uri pointant vers des ressources supplémentaires sur l'article  - `source`: Une séquence de caractères donnant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine entièrement qualifié du fournisseur source ou l'URL de l'objet source.  - `spatial`: La valeur doit être un URI de la liste d'autorités nommées des unités territoriales administratives (http://publications.europa.eu/mdr/authority/atu) tenue par le registre des métadonnées de l'Office des publications.  - `type`: Il faut que ce soit PublicOrganization.    
+Propriétés requises  
+- `id`  - `preferredLabel`  - `spatial`  - `type`  ## Description des propriétés du modèle de données  
 Classés par ordre alphabétique (cliquez pour plus de détails)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
@@ -300,17 +303,75 @@ PublicOrganization:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/PublicOrganization/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/PublicOrganization/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
 ## Exemples de charges utiles  
 #### PublicOrganization Valeurs-clés NGSI-v2 Exemple  
 Voici un exemple d'une PublicOrganization au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 lorsque l'on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": "The Finnish Patent and Registration Office",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ]  
+}  
+```  
 #### PublicOrganisation NGSI-v2 normalisée Exemple  
 Voici un exemple d'une PublicOrganization au format JSON-LD tel que normalisé. Ce format est compatible avec la NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": {  
+    "type": "string",  
+    "value": "The Finnish Patent and Registration Office"  
+  },  
+  "spatial": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  }  
+}  
+```  
 #### PublicOrganization Valeurs-clés NGSI-LD Exemple  
 Voici un exemple d'une PublicOrganization au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-LD quand on utilise `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": "The Finnish Patent and Registration Office",  
+  "spatial": [  
+    "http://publications.europa.eu/resource/authority/atu/FIN"  
+  ],  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 #### PublicOrganisation NGSI-LD normalisée Exemple  
 Voici un exemple d'une PublicOrganization au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-LD lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
+```json  
+{  
+  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+  "type": "PublicOrganization",  
+  "preferredLabel": {  
+    "type": "string",  
+    "value": "The Finnish Patent and Registration Office"  
+  },  
+  "spatial": {  
+    "type": "array",  
+    "value": [  
+      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ]  
+  },  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
+  ]  
+}  
+```  
 Voir [FAQ 10](https://smartdatamodels.org/index.php/faqs/) pour obtenir une réponse sur la façon de traiter les unités de magnitude.  
