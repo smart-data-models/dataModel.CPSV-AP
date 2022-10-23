@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティPublicService  
-===================  
+===================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/PublicService/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 グローバルな説明**公共サービスは、公的機関によって、または公的機関に代わって行われる、または行うことができる活動の強制または裁量のセットであり、公的に資金を供給し、公共政策から生じる**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `follows`: 次のプロパティは、パブリックサービスを、それが運用されるルール（複数可）にリンクします。ルールクラスの定義は非常に広範です。典型的なケースでは、公共サービスを提供する所轄官庁は、独自のポリシーを実施するルールも定義する。CPSV-APは、このようなシナリオにおける大幅なバリエーションを許容する柔軟性を備えている。  - `hasCompetentAuthority`: このプロパティは、公共サービスと、その公共サービスを提供する責任ある代理人である公共機関 とを結びつけるものである。特定の公共機関が公共サービスを直接提供するか、外部に委託するかは関係ない。サービスの実施主体である公共機関は、公共サービスを管理・提供する最終的な責任者である。管轄機関という用語は、サービス指令（2006/123/EC）において次のように定義されている。「加盟国においてサービス活動に関連して監督または規制の役割を担うあらゆる機関または当局。特に、行政当局（その役割を果たす裁判所を含む）、専門機関、および法的自治権の行使においてサービス活動へのアクセスまたはその行使を集団的に規制する職業団体または他の専門組織を含む」。  - `hasContactPoint`: サービスのコンタクトポイントは、ほとんどの場合において有用である。このプロパティの値、連絡先情報そのものは、schema:ContactPoint を使って提供されるべきである。連絡先情報は，主務官庁又は参加者の連絡先と同じでない場合がある公共サービスに関連するものでなければならないことに注意すること。  - `hasCost`: Has Cost プロパティは、パブリックサービスを Cost クラスの 1 つまたは複数のインスタンスにリンクする。これは、特定のパブリックサービスの実行に関連する市民または企業のために、パブリックサービスの実行に関連するコストを示します。サービスがアクセスされるチャネルによってコストが異なる場合、If Accessed Through関係を使用してチャネルにリンクさせることができます。  - `hasCriterion`: 公共サービスを、特定の場所に住んでいる、一定の年齢以上であるなど、そのサービスを必要とする、または使用するための基準を記述したクラスにリンクさせる。基準クラスは、Core Criterion and Core Evidence Vocabulary（https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary）で定義され ている。  - `hasInput`: Has Input プロパティは、パブリックサービスを1つまたは複数の Evidence クラスのインスタンスにリンクする。特定のパブリックサービスでは、配信するために特定のEvidenceの存在が必要になる場合があります。サービスを利用するために必要なエビデンスが、アクセスされるチャネルによって異なる場合、Has Inputはチャネルのレベルにする必要があります。  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、公共サービスに対して正式に発行された Identifier を表す。  - `isGroupedBy`: このプロパティは、パブリックサービスをイベントに関連付ける。複数のパブリックサービスが特定のイベントに関連付けられることがあり、同様に、同じパブリックサービスが複数の異なるイベントに関連付けられることがある。  - `keyword`: このプロパティは、公共サービスを説明するためのキーワード、用語、フレーズを表す。  - `language`: このプロパティは、公共サービスが利用可能な言語を表す。これは、1 つの言語または複数の言語（たとえば、2 つ以上の公用語を持つ国）であり得ます。このプロパティに指定できる値は、制御された語彙（欧州出版局の言語指定機関リスト（NAL））で説明されています。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `processingTime`: このプロパティの値は、パブリックサービスの実行に必要な（推定）時間である。実際の情報は、時間に関する ISO8601 構文を使用して提供される。例[5年→P5Y、1ヶ月→P1M、3日→P3D、2日4時間→P2DT4H] といった具合です。  - `publicServiceType`: 本プロパティは、統制された語彙で記述された公共サービスの種別を示す。このプロパティは、制御された語彙で記述された公共サービスの種類を示すものである。  - `sector`: このプロパティは、公共サービスが関連する、または対象とする業界またはセクターを表します。例：環境、安全、住宅。なお、1つの公共サービスが複数の業種に関係する場合がある。このプロパティに指定できる値は、管理された語彙（List of NACE codes:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html）として提供されます。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `spatial`: このプロパティの取り得る値は、制御された語彙（MDR Continents Named Authority List 、MDR Countries Named Authority List、MDR Places Named Authority List、Geonames：http://sws.geonames.org）として提供されている。  - `status`: パブリックサービスが活動中か非活動中か開発中か等を管理された語彙（ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf）に従って示すものである。  - `thematicArea`: このプロパティは、管理された語彙で記述された公共サービスの主題分野（例えば、社会保護、健康、娯楽、文化と宗教、家族、旅行経済問題、税金、職員、環境...）を表す。  - `type`: PublicServiceである必要があります。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `follows[array]`: 次のプロパティは、パブリックサービスを、それが運用されるルール（複数可）にリンクします。ルールクラスの定義は非常に広範です。典型的なケースでは、公共サービスを提供する所轄官庁は、独自のポリシーを実施するルールも定義する。CPSV-APは、このようなシナリオにおける大幅なバリエーションを許容する柔軟性を備えている。  . Model: [cpsv:follows](cpsv:follows)- `hasCompetentAuthority[*]`: このプロパティは、公共サービスと、その公共サービスを提供する責任ある代理人である公共機関 とを結びつけるものである。特定の公共機関が公共サービスを直接提供するか、外部に委託するかは関係ない。サービスの実施主体である公共機関は、公共サービスを管理・提供する最終的な責任者である。管轄機関という用語は、サービス指令（2006/123/EC）において次のように定義されている。「加盟国においてサービス活動に関連して監督または規制の役割を担うあらゆる機関または当局。特に、行政当局（その役割を果たす裁判所を含む）、専門機関、および法的自治権の行使においてサービス活動へのアクセスまたはその行使を集団的に規制する職業団体または他の専門組織を含む」。  . Model: [cv:hasCompetentAuthority](cv:hasCompetentAuthority)- `hasContactPoint[array]`: サービスのコンタクトポイントは、ほとんどの場合において有用である。このプロパティの値、連絡先情報そのものは、schema:ContactPoint を使って提供されるべきである。連絡先情報は，主務官庁又は参加者の連絡先と同じでない場合がある公共サービスに関連するものでなければならないことに注意すること。  . Model: [cpsv:hasContactPoint](cpsv:hasContactPoint)- `hasCost[array]`: Has Cost プロパティは、パブリックサービスを Cost クラスの 1 つまたは複数のインスタンスにリンクする。これは、特定のパブリックサービスの実行に関連する市民または企業のために、パブリックサービスの実行に関連するコストを示します。サービスがアクセスされるチャネルによってコストが異なる場合、If Accessed Through関係を使用してチャネルにリンクさせることができます。  . Model: [cv:hasCost](cv:hasCost)- `hasCriterion[array]`: 公共サービスを、特定の場所に住んでいる、特定の年齢以上であるなど、そのサービスを必要とする、または使用する基準を記述したクラスにリンクします。基準クラスは、Core Criterion and Core Evidence Vocabulary（https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary）で定義され ている。  . Model: [cv:hasCriterion](cv:hasCriterion)- `hasInput[array]`: Has Input プロパティは、パブリックサービスを1つまたは複数の Evidence クラスのインスタンスにリンクする。特定のパブリックサービスでは、配信するために特定のEvidenceの存在が必要になる場合があります。サービスを利用するために必要なエビデンスが、アクセスされるチャネルによって異なる場合、Has Inputはチャネルのレベルにする必要があります。  . Model: [cpsv:hasInput](cpsv:hasInput)- `id[*]`: エンティティの一意な識別子  - `identifier[string]`: このプロパティは、公共サービスに対して正式に発行された Identifier を表す。  . Model: [dct:identifier](dct:identifier)- `isGroupedBy[array]`: このプロパティは、パブリックサービスをイベントに関連付ける。複数のパブリックサービスが特定のイベントに関連付けられることがあり、同様に、同じパブリックサービスが複数の異なるイベントに関連付けられることがある。  . Model: [cv:isGroupedBy](cv:isGroupedBy)- `keyword[array]`: このプロパティは、公共サービスを説明するためのキーワード、用語、フレーズを表す。  . Model: [dcat:keyword](dcat:keyword)- `language[array]`: このプロパティは、公共サービスが利用可能な言語を表す。これは、1 つの言語または複数の言語（たとえば、2 つ以上の公用語を持つ国）であり得ます。このプロパティに指定できる値は、制御された語彙（欧州出版局の言語指定機関リスト（NAL））で説明されています。  . Model: [dct:language](dct:language)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `processingTime[string]`: このプロパティの値は、パブリックサービスの実行に必要な（推定）時間である。実際の情報は、時間に関する ISO8601 構文を使用して提供される。例[5年→P5Y、1ヶ月→P1M、3日→P3D、2日4時間→P2DT4H] といった具合です。  . Model: [cv:processingTime](cv:processingTime)- `publicServiceType[array]`: 本プロパティは、統制された語彙で記述された公共サービスの種別を示す。このプロパティは、制御された語彙で記述された公共サービスの種類を示すものである。  . Model: [dct:type](dct:type)- `sector[array]`: このプロパティは、公共サービスが関連する、または対象とする業界またはセクターを表します。例：環境、安全、住宅。なお、1つの公共サービスが複数の業種に関係する場合もある。このプロパティに指定できる値は、管理された語彙（List of NACE codes:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html）として提供されます。  . Model: [cv:sector](cv:sector)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `spatial[array]`: このプロパティの取り得る値は、制御された語彙（MDR Continents Named Authority List 、MDR Countries Named Authority List、MDR Places Named Authority List、Geonames：http://sws.geonames.org）として提供される。  . Model: [cv:spatial](cv:spatial)- `status[string]`: 公共サービスが活動中か非活動中か開発中か等を管理された語彙（ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf）に従って表示する。  . Model: [adms:status](adms:status)- `thematicArea[array]`: このプロパティは、管理された語彙で記述された公共サービスの主題領域（例えば、社会保護、健康、娯楽、文化および宗教、家族、旅行経済問題、税金、職員、環境など）を表します。  . Model: [cv:thematicArea](cv:thematicArea)- `type[string]`: PublicServiceである必要があります。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `description`  - `hasCompetentAuthority`  - `id`  - `identifier`  - `name`  - `type`  ## プロパティのデータモデル記述  
+- `description`  - `hasCompetentAuthority`  - `id`  - `identifier`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicService:    
@@ -486,9 +500,14 @@ PublicService:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### PublicService NGSI-v2 key-value の例。  
 ここでは、PublicServiceをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
@@ -554,8 +573,10 @@ PublicService:
   ]  
 }  
 ```  
+</details>  
 #### PublicService NGSI-v2 正規化例  
 以下は、正規化されたJSON-LD形式のPublicServiceの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
@@ -674,201 +695,214 @@ PublicService:
   }  
 }  
 ```  
+</details>  
 #### PublicService NGSI-LD キー値の例  
 ここでは、PublicServiceをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-  "type": "PublicService",  
-  "identifier": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki",  
-  "name": "Electronic application for a trademark",  
-  "description": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years.",  
-  "keyword": [  
-  ],  
-  "sector": [  
-    "A1.1.5",  
-    "A1.1.6",  
-    "A1.1.9"  
-  ],  
-  "thematicArea": [  
-    "social",  
-    "protection",  
-    "health",  
-    "recreation",  
-    "culture and religion",  
-    "family",  
-    "traveling",  
-    "economic",  
-    "affairs",  
-    "tax",  
-    "staff",  
-    "environment"  
-  ],  
-  "publicServiceType": [  
-    "Public Service"  
-  ],  
-  "language": [  
-    "http://publications.europa.eu/resource/authority/language/ENG"  
-  ],  
-  "status": "UnderDevelopment",  
-  "spatial": [  
-    "http://publications.europa.eu/resource/authority/atu/FIN"  
-  ],  
-  "processingTime": "P2Y9M5DT6H5M20S",  
-  "isGroupedBy": [  
-    "http://europa.eu/youreurope/businessOntology#start-grow"  
-  ],  
-  "hasCriterion": [  
-    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-    "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
-  ],  
-  "hasCompetentAuthority": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362",  
-  "hasInput": [  
-    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-    "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-  ],  
-  "follows": [  
-    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-    "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-  ],  
-  "hasContactPoint": [  
-    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-    "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-  ],  
-  "hasCost": [  
-    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-    "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "type": "PublicService",  
+    "identifier": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki",  
+    "name": "Electronic application for a trademark",  
+    "description": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years.",  
+    "keyword": [],  
+    "sector": [  
+        "A1.1.5",  
+        "A1.1.6",  
+        "A1.1.9"  
+    ],  
+    "thematicArea": [  
+        "social",  
+        "protection",  
+        "health",  
+        "recreation",  
+        "culture and religion",  
+        "family",  
+        "traveling",  
+        "economic",  
+        "affairs",  
+        "tax",  
+        "staff",  
+        "environment"  
+    ],  
+    "publicServiceType": [  
+        "Public Service"  
+    ],  
+    "language": [  
+        "http://publications.europa.eu/resource/authority/language/ENG"  
+    ],  
+    "status": "UnderDevelopment",  
+    "spatial": [  
+        "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ],  
+    "processingTime": "P2Y9M5DT6H5M20S",  
+    "isGroupedBy": [  
+        "http://europa.eu/youreurope/businessOntology#start-grow"  
+    ],  
+    "hasCriterion": [  
+        "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+        "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+    ],  
+    "hasCompetentAuthority": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362",  
+    "hasInput": [  
+        "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+        "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ],  
+    "follows": [  
+        "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+        "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ],  
+    "hasContactPoint": [  
+        "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+        "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ],  
+    "hasCost": [  
+        "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+        "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### PublicService NGSI-LD 正規化例  
 JSON-LD 形式の PublicService を正規化した例です。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-  "type": "PublicService",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Electronic application for a trademark"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years."  
-  },  
-  "keyword": {  
-    "type": "Property",  
-    "value": []  
-  },  
-  "sector": {  
-    "type": "Property",  
-    "value": [  
-      "A1.1.5",  
-      "A1.1.6",  
-      "A1.1.9"  
+    "id": "urn:ngsi-ld:CPSV-AP:PublicService:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "type": "PublicService",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Electronic application for a trademark"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol that distinguishes goods and services from the similar goods and services of others. A trademark is a symbol which distinguishes the goods and services of a company from the similar goods and services of other companies. A trademark acts as a means of distinction in the market. A trademark is also an exclusive right. It gives the holder the exclusive right to use the mark in the marketing, packaging or business documents of the goods or services or in any other way, including orally. There are different types of trademarks. A trademark can, for example be, a word, figure, slogan or even a sound. Property Value When you register your trademark, you will obtain protection for it for ten years. The protection provided by registration begins on the date of application and can be renewed every ten years."  
+    },  
+    "keyword": {  
+        "type": "Property",  
+        "value": []  
+    },  
+    "sector": {  
+        "type": "Property",  
+        "value": [  
+            "A1.1.5",  
+            "A1.1.6",  
+            "A1.1.9"  
+        ]  
+    },  
+    "thematicArea": {  
+        "type": "Property",  
+        "value": [  
+            "social",  
+            "protection",  
+            "health",  
+            "recreation",  
+            "culture and religion",  
+            "family",  
+            "traveling",  
+            "economic",  
+            "affairs",  
+            "tax",  
+            "staff",  
+            "environment"  
+        ]  
+    },  
+    "publicServiceType": {  
+        "type": "Property",  
+        "value": [  
+            "Public Service"  
+        ]  
+    },  
+    "language": {  
+        "type": "Property",  
+        "value": [  
+            "http://publications.europa.eu/resource/authority/language/ENG"  
+        ]  
+    },  
+    "status": {  
+        "type": "Property",  
+        "value": "UnderDevelopment"  
+    },  
+    "spatial": {  
+        "type": "Property",  
+        "value": [  
+            "http://publications.europa.eu/resource/authority/atu/FIN"  
+        ]  
+    },  
+    "processingTime": {  
+        "type": "Property",  
+        "value": {  
+            "@type": "Date-time",  
+            "@value": "P2Y9M5DT6H5M20S"  
+        }  
+    },  
+    "isGroupedBy": {  
+        "type": "Relationship",  
+        "value": [  
+            "http://europa.eu/youreurope/businessOntology#start-grow"  
+        ]  
+    },  
+    "hasCriterion": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+            "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
+        ]  
+    },  
+    "hasCompetentAuthority": {  
+        "type": "Relationship",  
+        "value": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362"  
+    },  
+    "hasInput": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+            "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+        ]  
+    },  
+    "follows": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+            "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+        ]  
+    },  
+    "hasContactPoint": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+            "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+        ]  
+    },  
+    "hasCost": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
+            "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "thematicArea": {  
-    "type": "Property",  
-    "value": [  
-      "social",  
-      "protection",  
-      "health",  
-      "recreation",  
-      "culture and religion",  
-      "family",  
-      "traveling",  
-      "economic",  
-      "affairs",  
-      "tax",  
-      "staff",  
-      "environment"  
-    ]  
-  },  
-  "publicServiceType": {  
-    "type": "Property",  
-    "value": [  
-      "Public Service"  
-    ]  
-  },  
-  "language": {  
-    "type": "Property",  
-    "value": [  
-      "http://publications.europa.eu/resource/authority/language/ENG"  
-    ]  
-  },  
-  "status": {  
-    "type": "Property",  
-    "value": "UnderDevelopment"  
-  },  
-  "spatial": {  
-    "type": "Property",  
-    "value": [  
-      "http://publications.europa.eu/resource/authority/atu/FIN"  
-    ]  
-  },  
-  "processingTime": {  
-    "type": "Property",  
-    "value": {  
-      "@type": "Date-time",  
-      "@value": "P2Y9M5DT6H5M20S"  
-    }  
-  },  
-  "isGroupedBy": {  
-    "type": "Relationship",  
-    "value": [  
-      "http://europa.eu/youreurope/businessOntology#start-grow"  
-    ]  
-  },  
-  "hasCriterion": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-      "urn:ngsi-ld:CPSV-AP:CriterionRequirement:4157c56b-754b-5d34-b4b1-0256b9a472d2"  
-    ]  
-  },  
-  "hasCompetentAuthority": {  
-    "type": "Relationship",  
-    "value": "urn:ngsi-ld:CPSV-AP:PublicOrganization:8566c45a-8b9e-46d5-8371-81c8ad002362"  
-  },  
-  "hasInput": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-      "urn:ngsi-ld:CPSV-AP:Evidence:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-    ]  
-  },  
-  "follows": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-      "urn:ngsi-ld:CPSV-AP:Rule:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-    ]  
-  },  
-  "hasContactPoint": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-      "urn:ngsi-ld:CPSV-AP:ContactPoint:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-    ]  
-  },  
-  "hasCost": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-8b9e-46d5-8371-81c8ad0cced5",  
-      "urn:ngsi-ld:CPSV-AP:Cost:8566c45a-5a3e-2d9a-8371-81c8ad0cced5"  
-    ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
-CPSV-AP v2.2.1 仕様では dct:type であるプロパティタイプは、ETSI NGSI-LD のコアコンテキス トからのプロパティタイプとの曖昧さを解消するために publicServiceType に変換されている。  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+CPSV-AP v2.2.1 仕様では dct:type であるプロパティタイプは、ETSI NGSI-LD コアコンテキストのプロパティタイプとの曖昧さを解消するために publicServiceType に変換される。  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
