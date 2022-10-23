@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: Kosten  
-===============  
+===============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Cost/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Die Kostenklasse stellt alle Kosten dar, die mit der Ausführung eines öffentlichen Dienstes verbunden sind und die der Agent, der ihn konsumiert, bezahlen muss.**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `currency`: Diese Eigenschaft stellt die Währung dar, in der die Kosten bezahlt werden müssen und der Wert der Kosten ausgedrückt wird. Die möglichen Werte für diese Eigenschaft werden in einem kontrollierten Vokabular beschrieben. Die empfohlenen kontrollierten Vokabulare sind in der Currencies Named Authority List (NAL) des Europäischen Amts für Veröffentlichungen in Anlehnung an die ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency) aufgeführt.  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Diese Eigenschaft stellt eine freie Textbeschreibung der Kosten dar.  - `id`: Eindeutiger Bezeichner der Entität  - `identifier`: Diese Eigenschaft stellt einen Identifikator für die Kosten dar. Diese Eigenschaft sollte ein URI sein, wenn sie in RDF modelliert ist.  - `ifAccessedThrough`: Bereich:'Kanal'. Wenn die Kosten je nach verwendetem Kanal variieren, z. B. beim Zugriff über einen Online-Dienst im Vergleich zum Zugriff an einem physischen Ort, können die Kosten mit dem Kanal verknüpft werden, indem die Eigenschaft Wenn Zugriff über verwendet wird.  - `isDefinedBy`: Diese Eigenschaft verbindet die Klasse Kosten mit einer oder mehreren Instanzen der Klasse Öffentliche Organisation. Diese Eigenschaft gibt an, welche öffentliche Organisation die zuständige Behörde für die Festlegung der Kosten im Zusammenhang mit der Erbringung einer bestimmten öffentlichen Dienstleistung ist.  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type`: Es müssen Kosten sein.  - `value`: Diese Eigenschaft stellt einen numerischen Wert dar, der die Höhe der Kosten angibt.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `currency[string]`: Diese Eigenschaft stellt die Währung dar, in der die Kosten bezahlt werden müssen und der Wert der Kosten ausgedrückt wird. Die möglichen Werte für diese Eigenschaft werden in einem kontrollierten Vokabular beschrieben. Die empfohlenen kontrollierten Vokabulare sind in der Currencies Named Authority List (NAL) des Europäischen Amts für Veröffentlichungen in Anlehnung an die ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency) aufgeführt.  . Model: [cv:currency](cv:currency)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Diese Eigenschaft stellt eine freie Textbeschreibung der Kosten dar.  . Model: [dct:description](dct:description)- `id[*]`: Eindeutiger Bezeichner der Entität  - `identifier[string]`: Diese Eigenschaft stellt einen Identifikator für die Kosten dar. Diese Eigenschaft sollte ein URI sein, wenn sie in RDF modelliert ist.  . Model: [dct:identifier](dct:identifier)- `ifAccessedThrough[string]`: Bereich:'Kanal'. Wenn die Kosten je nach verwendetem Kanal variieren, z. B. beim Zugriff über einen Online-Dienst im Vergleich zum Zugriff an einem physischen Ort, können die Kosten mit dem Kanal verknüpft werden, indem die Eigenschaft Wenn Zugriff über verwendet wird.  . Model: [cv:ifAccessedThrough](cv:ifAccessedThrough)- `isDefinedBy[array]`: Diese Eigenschaft verbindet die Klasse Kosten mit einer oder mehreren Instanzen der Klasse Öffentliche Organisation. Diese Eigenschaft gibt an, welche öffentliche Organisation die zuständige Behörde für die Festlegung der Kosten im Zusammenhang mit der Erbringung einer bestimmten öffentlichen Dienstleistung ist.  . Model: [cv:isDefinedBy](cv:isDefinedBy)- `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `type[string]`: Es müssen Kosten sein.  . Model: [https://schema.org/Text](https://schema.org/Text)- `value[number]`: Diese Eigenschaft stellt einen numerischen Wert dar, der die Höhe der Kosten angibt.  . Model: [cv:value](cv:value)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `identifier`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `identifier`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Cost:    
@@ -326,9 +340,14 @@ Cost:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### Kosten NGSI-v2 Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für ein Cost im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
@@ -344,8 +363,10 @@ Cost:
   "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
 }  
 ```  
+</details>  
 #### Kosten NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für ein Cost im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
@@ -379,62 +400,76 @@ Cost:
   }  
 }  
 ```  
+</details>  
 #### Kosten NGSI-LD-Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für ein Cost im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-  "type": "Cost",  
-  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
-  "value": 12.3,  
-  "currency": "EUR",  
-  "description": "Het wettigen van een handtekening is gratis.",  
-  "isDefinedBy": [  
-    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
-  ],  
-  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
-   "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+    "type": "Cost",  
+    "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+    "value": 12.3,  
+    "currency": "EUR",  
+    "description": "Het wettigen van een handtekening is gratis.",  
+    "isDefinedBy": [  
+        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    ],  
+    "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### Kosten NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für ein Cost im JSON-LD-Format in normalisierter Form. Dies ist mit NGSI-LD kompatibel, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-  "type": "Cost",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
-  },  
-  "value": {  
-    "type": "Property",  
-    "value": 12.3  
-  },  
-  "currency": {  
-    "type": "Property",  
-    "value": "EUR"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Het wettigen van een handtekening is gratis."  
-  },  
-  "isDefinedBy": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+    "type": "Cost",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
+    },  
+    "value": {  
+        "type": "Property",  
+        "value": 12.3  
+    },  
+    "currency": {  
+        "type": "Property",  
+        "value": "EUR"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Het wettigen van een handtekening is gratis."  
+    },  
+    "isDefinedBy": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+            "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+        ]  
+    },  
+    "ifAccessedThrough": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "ifAccessedThrough": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
-  },  
-   "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
