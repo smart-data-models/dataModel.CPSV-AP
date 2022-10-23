@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: Regla  
-==============  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Rule/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Descripción global: **La clase Regla representa un documento que establece las normas, directrices o procedimientos específicos que sigue el Servicio Público. Incluye las condiciones de servicio, la licencia y los requisitos de autenticación del Servicio Público.**  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `identifier`: Esta propiedad representa un identificador para la regla.  - `implements`: La propiedad "Implements" vincula una norma con los documentos legislativos o políticos pertinentes, es decir, con el recurso legal bajo el que se definen las normas.  - `language`: Esta propiedad representa la(s) lengua(s) en la(s) que está disponible la Regla. Puede ser una o varias lenguas, por ejemplo en países con más de una lengua oficial. Los posibles valores de esta propiedad se describen en un vocabulario controlado. Lista de Autoridades Nombradas (NAL) de la Oficina Europea de Publicaciones, http://publications.europa.eu/mdr/authority/language/index.html  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tiene que ser una regla.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad representa un identificador para la regla.  . Model: [dct:identifier](dct:identifier)- `implements[array]`: La propiedad "Implements" vincula una norma con los documentos legislativos o políticos pertinentes, es decir, con el recurso legal bajo el que se definen las normas.  . Model: [cpsv:implements](cpsv:implements)- `language[array]`: Esta propiedad representa la(s) lengua(s) en la(s) que está disponible la Regla. Puede ser una o varias lenguas, por ejemplo en países con más de una lengua oficial. Los posibles valores de esta propiedad se describen en un vocabulario controlado. Lista de Autoridades Nombradas (NAL) de la Oficina Europea de Publicaciones, http://publications.europa.eu/mdr/authority/language/index.html  . Model: [dct:language](dct:language)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type[string]`: Tiene que ser una regla.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `description`  - `id`  - `identifier`  - `name`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `description`  - `id`  - `identifier`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Rule:    
@@ -324,9 +338,14 @@ Rule:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### Regla NGSI-v2 valores-clave Ejemplo  
 Aquí hay un ejemplo de una regla en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
@@ -343,8 +362,10 @@ Rule:
   ]  
 }  
 ```  
+</details>  
 #### Regla NGSI-v2 normalizada Ejemplo  
 Aquí hay un ejemplo de una regla en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
@@ -376,61 +397,75 @@ Rule:
   }  
 }  
 ```  
+</details>  
 #### Regla NGSI-LD valores-clave Ejemplo  
 Aquí hay un ejemplo de una regla en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
-  "type": "Rule",  
-  "identifier": "Rule7e331270c97d4ee9ab29693f9dc75a3c",  
-  "name": "DEFAULT NAME",  
-  "description": "The mayor of the municipality or his/her authorised representative checks whether the signature to be legalised corresponds to that of the person whose identity is being established. A signature on a white sheet of paper can never be legalised.",  
-  "language": [  
-    "http://publications.europa.eu/resource/authority/language/ENG"  
-  ],  
-  "implements": [  
-    "urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",  
-    "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
+    "type": "Rule",  
+    "identifier": "Rule7e331270c97d4ee9ab29693f9dc75a3c",  
+    "name": "DEFAULT NAME",  
+    "description": "The mayor of the municipality or his/her authorised representative checks whether the signature to be legalised corresponds to that of the person whose identity is being established. A signature on a white sheet of paper can never be legalised.",  
+    "language": [  
+        "http://publications.europa.eu/resource/authority/language/ENG"  
+    ],  
+    "implements": [  
+        "urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",  
+        "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### Regla NGSI-LD normalizada Ejemplo  
 Aquí hay un ejemplo de una regla en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
-  "type": "Rule",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "Rule7e331270c97d4ee9ab29693f9dc75a3c"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "DEFAULT NAME"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "The mayor of the municipality or his/her authorised representative checks whether the signature to be legalised corresponds to that of the person whose identity is being established. A signature on a white sheet of paper can never be legalised."  
-  },  
-  "language": {  
-    "type": "Property",  
-    "value": [  
-      "http://publications.europa.eu/resource/authority/language/ENG"  
+    "id": "urn:ngsi-ld:CPSV-AP:Rule:7e331270-c97d-4ee9-ab29-693f9dc75a3c",  
+    "type": "Rule",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "Rule7e331270c97d4ee9ab29693f9dc75a3c"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "DEFAULT NAME"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "The mayor of the municipality or his/her authorised representative checks whether the signature to be legalised corresponds to that of the person whose identity is being established. A signature on a white sheet of paper can never be legalised."  
+    },  
+    "language": {  
+        "type": "Property",  
+        "value": [  
+            "http://publications.europa.eu/resource/authority/language/ENG"  
+        ]  
+    },  
+    "implements": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",  
+            "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "implements": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",  
-      "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"  
-    ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
