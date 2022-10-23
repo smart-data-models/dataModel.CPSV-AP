@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entidad: CriterioRequisito  
-==========================  
+==========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Licencia abierta](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/CriterionRequirement/LICENSE.md)  
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Descripción global: **No todos los servicios públicos son necesarios o utilizables por todos. Por ejemplo, el servicio de visados gestionado por los países europeos no es necesario para los ciudadanos europeos, pero sí para algunos ciudadanos de otros lugares, o los servicios públicos que ofrecen subsidios de desempleo y subvenciones están dirigidos a grupos sociales específicos. El CPSV reutiliza el Vocabulario de Criterios y Pruebas Fundamentales (CCCEV - https://joinup.ec.europa.eu/release/core-criterion-and-core-evidence-vocabulary-v100) para esta clase. El CCCEV ofrece más detalles, pero la clase Criterion Requirement tiene tres propiedades obligatorias**.  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+Descripción global: **No todos los servicios públicos son necesarios o utilizables por todos. Por ejemplo, el servicio de visados gestionado por los países europeos no es necesario para los ciudadanos europeos, pero sí para algunos ciudadanos de otros lugares, o los servicios públicos que ofrecen subsidios de desempleo y subvenciones están dirigidos a grupos sociales específicos. El CPSV reutiliza el Vocabulario de Criterios y Pruebas Fundamentales (CCCEV - https://joinup.ec.europa.eu/release/core-criterion-and-core-evidence-vocabulary-v100) para esta clase. El CCCEV ofrece más detalles, pero la clase Criterion Requirement tiene tres propiedades obligatorias.**  
 versión: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `criterionReqType`: Esta propiedad representa el tipo de requisito de criterio descrito en un vocabulario controlado (TBC).  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `identifier`: Esta propiedad representa un identificador para el requisito del criterio.  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `type`: Tiene que ser CriterionRequirement.    
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `criterionReqType[array]`: Esta propiedad representa el tipo de requisito de criterio descrito en un vocabulario controlado (TBC).  . Model: [dct:type](dct:type)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad representa un identificador para el requisito del criterio.  . Model: [dct:identifier](dct:identifier)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type[string]`: Tiene que ser CriterionRequirement.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Propiedades requeridas  
-- `criterionReqType`  - `id`  - `identifier`  - `name`  - `type`  ## Descripción del modelo de datos de las propiedades  
+- `criterionReqType`  - `id`  - `identifier`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Descripción del modelo de datos de las propiedades  
 Ordenados alfabéticamente (haga clic para ver los detalles)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 CriterionRequirement:    
@@ -304,13 +318,18 @@ CriterionRequirement:
   x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/CriterionRequirement/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/CriterionRequirement/schema.json    
-  x-model-tags: CEFAT4CIIES    
+  x-model-tags: CEFAT4CITIES    
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### CriterionRequirement NGSI-v2 key-values Ejemplo  
 Aquí hay un ejemplo de un CriterionRequirement en formato JSON-LD como valores-clave. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
@@ -323,8 +342,10 @@ CriterionRequirement:
   ]  
 }  
 ```  
+</details>  
 #### CriterioRequisito NGSI-v2 normalizado Ejemplo  
 Este es un ejemplo de un CriterionRequirement en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
@@ -346,47 +367,61 @@ CriterionRequirement:
   }  
 }  
 ```  
+</details>  
 #### CriterionRequirement NGSI-LD key-values Ejemplo  
 Aquí hay un ejemplo de un CriterionRequirement en formato JSON-LD como valores-clave. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
-  "type": "CriterionRequirement",  
-  "identifier": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200",  
-  "name": "DEFAULT NAME",  
-  "criterionReqType": [  
-    "Holding a ticket",  
-    "Being older than eighteen"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+    "type": "CriterionRequirement",  
+    "identifier": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200",  
+    "name": "DEFAULT NAME",  
+    "criterionReqType": [  
+        "Holding a ticket",  
+        "Being older than eighteen"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### CriterioRequisito NGSI-LD normalizado Ejemplo  
 Este es un ejemplo de un CriterionRequirement en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
-  "type": "CriterionRequirement",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "DEFAULT NAME"  
-  },  
-  "criterionReqType": {  
-    "type": "Property",  
-    "value": [  
-      "Holding a ticket",  
-      "Being older than eighteen"  
+    "id": "urn:ngsi-ld:CPSV-AP:CriterionRequirement:d70d5a06-bbf3-438f-ba65-10f93544a200",  
+    "type": "CriterionRequirement",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "CriterionRequirementd70d5a06bbf3438fba6510f93544a200"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "DEFAULT NAME"  
+    },  
+    "criterionReqType": {  
+        "type": "Property",  
+        "value": [  
+            "Holding a ticket",  
+            "Being older than eighteen"  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
