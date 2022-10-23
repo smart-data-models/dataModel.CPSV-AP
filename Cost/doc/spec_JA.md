@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 事業者コスト  
-======  
+======<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/Cost/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**コストクラスは、パブリックサービスの実行に関連し、それを消費するエージェントが支払う必要があるすべてのコストを表します。  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**コストクラスは、パブリックサービスの実行に関連し、それを消費するエージェントが支払う必要があるすべてのコストを表します**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `currency`: 本プロパティは、「コスト」の支払いに必要な、「コスト」の値を表す通貨を示す。このプロパティに指定可能な値は、管理された語彙で記述される。推奨される制御された語彙は、ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency) に従い、European Publications Office's Currencies Named Authority List (NAL) にリストアップされている。  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このプロパティは、コストに関するフリーテキストの説明を表す。  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、コストの識別子を表す。このプロパティは、RDFでモデル化されている場合は、URIである必要があります。  - `ifAccessedThrough`: Range:'Channel'.コストが使用されるチャネルによって異なる場合、例えば、オンラインサービスを通じてアクセスした場合と、物理的な場所でアクセスした場合、コストはIf Accessed Throughプロパティを使ってチャネルにリンクさせることができます。  - `isDefinedBy`: このプロパティは、コストクラスと 1 つ以上の公共機関クラスのインスタンスを関連付ける。このプロパティは、特定の公共サービスの提供に関連するコストを定義する主務官庁がどの公 共団体であるかを示すものである。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: コストでなければならない。  - `value`: 本プロパティは、コスト量を数値で示すものである。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `currency[string]`: 本プロパティは、「コスト」の支払いに必要な通貨と、「コスト」の値を表す通貨を示す。このプロパティに指定可能な値は、管理された語彙で記述される。推奨される制御された語彙は、ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency) に従って、European Publications Office's Currencies Named Authority List (NAL) にリストアップされている。  . Model: [cv:currency](cv:currency)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このプロパティは、コストに関するフリーテキストの説明を表す。  . Model: [dct:description](dct:description)- `id[*]`: エンティティの一意な識別子  - `identifier[string]`: このプロパティは、コストの識別子を表す。このプロパティは、RDFでモデル化されている場合は、URIである必要があります。  . Model: [dct:identifier](dct:identifier)- `ifAccessedThrough[string]`: Range:'Channel'.コストが使用されるチャネルによって異なる場合、例えば、オンラインサービスを通じてアクセスした場合と、物理的な場所でアクセスした場合、コストはIf Accessed Throughプロパティを使ってチャネルにリンクさせることができます。  . Model: [cv:ifAccessedThrough](cv:ifAccessedThrough)- `isDefinedBy[array]`: このプロパティは、コストクラスと 1 つ以上の公共機関クラスのインスタンスを関連付ける。このプロパティは、特定の公共サービスの提供に関連するコストを定義する主務官庁がどの公 共団体であるかを示すものである。  . Model: [cv:isDefinedBy](cv:isDefinedBy)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: コストでなければならない。  . Model: [https://schema.org/Text](https://schema.org/Text)- `value[number]`: 本プロパティは、コスト量を数値で示すものである。  . Model: [cv:value](cv:value)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `identifier`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `identifier`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 Cost:    
@@ -326,9 +340,14 @@ Cost:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### NGSI-v2 のコスト鍵盤の例  
 ここでは、CostをJSON-LD形式でkey-valuesとした例を示す。これは、`options=keyValues`を使用した場合にNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
@@ -344,8 +363,10 @@ Cost:
   "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
 }  
 ```  
+</details>  
 #### コスト NGSI-v2 正規化例  
 以下は、Costを正規化したJSON-LD形式の例である。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
@@ -379,62 +400,76 @@ Cost:
   }  
 }  
 ```  
+</details>  
 #### コスト NGSI-LD キー値例  
 ここでは、CostをJSON-LD形式でkey-valuesにした例を示す。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-  "type": "Cost",  
-  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
-  "value": 12.3,  
-  "currency": "EUR",  
-  "description": "Het wettigen van een handtekening is gratis.",  
-  "isDefinedBy": [  
-    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
-  ],  
-  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
-   "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+    "type": "Cost",  
+    "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+    "value": 12.3,  
+    "currency": "EUR",  
+    "description": "Het wettigen van een handtekening is gratis.",  
+    "isDefinedBy": [  
+        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    ],  
+    "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### コスト NGSI-LD 正規化例  
 以下は、Costを正規化したJSON-LD形式の例である。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-  "type": "Cost",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
-  },  
-  "value": {  
-    "type": "Property",  
-    "value": 12.3  
-  },  
-  "currency": {  
-    "type": "Property",  
-    "value": "EUR"  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "Het wettigen van een handtekening is gratis."  
-  },  
-  "isDefinedBy": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-      "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+    "type": "Cost",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
+    },  
+    "value": {  
+        "type": "Property",  
+        "value": 12.3  
+    },  
+    "currency": {  
+        "type": "Property",  
+        "value": "EUR"  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "Het wettigen van een handtekening is gratis."  
+    },  
+    "isDefinedBy": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+            "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+        ]  
+    },  
+    "ifAccessedThrough": {  
+        "type": "Property",  
+        "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "ifAccessedThrough": {  
-    "type": "Property",  
-    "value": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5"  
-  },  
-   "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
