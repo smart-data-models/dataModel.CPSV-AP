@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 エンティティビジネスイベント  
-==============  
+==============<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/BusinessEvent/LICENSE.md)  
 [ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description:**このクラスは、Event を専門に扱う Business Event を表す。ビジネスイベントとは、あるビジネスのライフサイクルにおける特定の状況またはイベントであり、この特定の時点でそのビジネスの一つ以上のニーズや(法的)義務を満たすものである。ビジネスイベントは、関連するビジネスニーズや義務が満たされるために、一連のパブリックサービスが提供され消費されることを要求する。ビジネスイベントは、特定の加盟国のコンテキスト内で定義される。言い換えれば、ビジネスイベントは、その特定のイベントを完了するために提供される必要がある多くの公共サービスをまとめたものである**。  
 バージョン: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: この項目の別称  - `areaServed`: サービスまたは提供品が提供される地理的な地域  - `dataProvider`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description`: このアイテムの説明  - `eventType`: typeプロパティはEventをイベントタイプの管理された語彙にリンクし、それらの管理された語彙の性質が、最初にビジネスを作成するようなビジネスイベントと子供の誕生のようなライフイベントの大きな違いとなるのである。  - `id`: エンティティの一意な識別子  - `identifier`: このプロパティは、イベントの識別子を表す。  - `location`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name`: このアイテムの名称です。  - `owner`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `relatedService`: 範囲PublicService。このプロパティは、イベントをそれに関連する公共サービスに直接リンクする。  - `seeAlso`: 項目に関する追加リソースを指すURIのリスト。  - `source`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: BusinessEventである必要があります。    
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `eventType[array]`: typeプロパティはEventをイベントタイプの管理された語彙にリンクし、それらの管理された語彙の性質が、最初にビジネスを作成するようなビジネスイベントと子供の誕生のようなライフイベントの大きな違いとなるのである。  . Model: [dct:type](dct:type)- `id[*]`: エンティティの一意な識別子  - `identifier[string]`: このプロパティは、イベントの識別子を表す。  . Model: [dct:identifier](dct:identifier)- `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリスト  - `relatedService[array]`: 範囲PublicService。このプロパティは、イベントをそれに関連する公共サービスに直接リンクする。  . Model: [dct:relation](dct:relation)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: BusinessEventである必要があります。  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 必要なプロパティ  
-- `id`  - `identifier`  - `name`  - `type`  ## プロパティのデータモデル記述  
+- `id`  - `identifier`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
 アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 BusinessEvent:    
@@ -344,9 +358,14 @@ BusinessEvent:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
 #### BusinessEvent NGSI-v2 key-value の例。  
 以下は、BusinessEventをJSON-LD形式でkey-valuesにした例である。これは、`options=keyValues` を使用した場合に NGSI-v2 と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
@@ -362,8 +381,10 @@ BusinessEvent:
   ]  
 }  
 ```  
+</details>  
 #### BusinessEvent NGSI-v2 正規化例  
-以下は、正規化された JSON-LD 形式の BusinessEvent の例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+以下は、正規化されたJSON-LD形式のBusinessEventの例である。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
@@ -394,59 +415,73 @@ BusinessEvent:
   }  
 }  
 ```  
+</details>  
 #### ビジネスイベント NGSI-LD キー値例  
 以下は、BusinessEventをJSON-LD形式でkey-valuesにした例である。これは `options=keyValues` を使用した場合に NGSI-LD と互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
-  "type": "BusinessEvent",  
-  "identifier": "http://europa.eu/youreurope/businessOntology#start-grow",  
-  "name": "Start & grow",  
-  "eventType": [  
-    "Registering Intellectual Property"  
-  ],  
-  "description": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights.",  
-  "relatedService": [  
-    "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+    "type": "BusinessEvent",  
+    "identifier": "http://europa.eu/youreurope/businessOntology#start-grow",  
+    "name": "Start & grow",  
+    "eventType": [  
+        "Registering Intellectual Property"  
+    ],  
+    "description": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights.",  
+    "relatedService": [  
+        "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### ビジネスイベント NGSI-LD 正規化例  
 以下は、BusinessEvent を JSON-LD 形式で正規化した例である。これはオプションを使用しない場合、NGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
-  "type": "BusinessEvent",  
-  "identifier": {  
-    "type": "Property",  
-    "value": "http://europa.eu/youreurope/businessOntology#start-grow"  
-  },  
-  "name": {  
-    "type": "Property",  
-    "value": "Start & grow"  
-  },  
-  "eventType": {  
-    "type": "Property",  
-    "value": [  
-      "Registering Intellectual Property"  
+    "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",  
+    "type": "BusinessEvent",  
+    "identifier": {  
+        "type": "Property",  
+        "value": "http://europa.eu/youreurope/businessOntology#start-grow"  
+    },  
+    "name": {  
+        "type": "Property",  
+        "value": "Start & grow"  
+    },  
+    "eventType": {  
+        "type": "Property",  
+        "value": [  
+            "Registering Intellectual Property"  
+        ]  
+    },  
+    "description": {  
+        "type": "Property",  
+        "value": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights."  
+    },  
+    "relatedService": {  
+        "type": "Relationship",  
+        "value": [  
+            "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "description": {  
-    "type": "Property",  
-    "value": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights."  
-  },  
-  "relatedService": {  
-    "type": "Relationship",  
-    "value": [  
-      "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"  
-    ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
