@@ -1,17 +1,31 @@
+<!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
 Entität: PublicOrganization  
-===========================  
+===========================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.CPSV-AP/blob/master/PublicOrganization/LICENSE.md)  
 [Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Globale Beschreibung: **Das CPSV-AP verwendet das Core Public Organization Vocabulary (https://joinup.ec.europa.eu/asset/cpov/asset_release/all), das das Konzept einer öffentlichen Organisation und die damit verbundenen Eigenschaften und Beziehungen definiert. Es basiert weitgehend auf der W3C Organization Ontology (http://www.w3.org/TR/vocab-org).**  
 Version: 0.0.1  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## Liste der Eigenschaften  
 
-- `address`: Die Postanschrift  - `alternateName`: Ein alternativer Name für diesen Artikel  - `areaServed`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  - `dataProvider`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description`: Eine Beschreibung dieses Artikels  - `id`: Eindeutiger Bezeichner der Entität  - `location`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name`: Der Name dieses Artikels.  - `owner`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `preferredLabel`: Diese Eigenschaft steht für einen formell vergebenen Identifikator für den öffentlichen Dienst.  - `seeAlso`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `spatial`: Bei dem Wert sollte es sich um einen URI aus der Liste der administrativen Gebietseinheiten (http://publications.europa.eu/mdr/authority/atu) handeln, die vom Metadatenregister des Amts für Veröffentlichungen geführt wird.  - `type`: Es muss PublicOrganization sein.    
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, liegt das daran, dass es mehrere Typen oder unterschiedliche Formate/Muster haben kann</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `preferredLabel[string]`: Diese Eigenschaft steht für einen formell vergebenen Identifikator für den öffentlichen Dienst.  . Model: [skos:prefLabel](skos:prefLabel)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Es wird empfohlen, den voll qualifizierten Domänennamen des Quellanbieters oder die URL des Quellobjekts zu verwenden.  - `spatial[array]`: Bei dem Wert sollte es sich um einen URI aus der Liste der administrativen Gebietseinheiten (http://publications.europa.eu/mdr/authority/atu) handeln, die vom Metadatenregister des Amts für Veröffentlichungen geführt wird.  . Model: [dct:spatial](dct:spatial)- `type[string]`: Es muss PublicOrganization sein.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Erforderliche Eigenschaften  
-- `id`  - `preferredLabel`  - `spatial`  - `type`  ## Datenmodell Beschreibung der Eigenschaften  
+- `id`  - `preferredLabel`  - `spatial`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## Datenmodell Beschreibung der Eigenschaften  
 Alphabetisch sortiert (für Details anklicken)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 PublicOrganization:    
@@ -307,9 +321,14 @@ PublicOrganization:
   x-version: 0.0.1    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Beispiel-Nutzlasten  
 #### PublicOrganization NGSI-v2 key-values Beispiel  
 Hier ist ein Beispiel für eine PublicOrganization im JSON-LD-Format als Key-Values. Dies ist mit NGSI-v2 kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
@@ -320,8 +339,10 @@ PublicOrganization:
   ]  
 }  
 ```  
+</details>  
 #### PublicOrganization NGSI-v2 normalisiert Beispiel  
 Hier ist ein Beispiel für eine PublicOrganization im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
@@ -338,40 +359,54 @@ PublicOrganization:
   }  
 }  
 ```  
+</details>  
 #### PublicOrganization NGSI-LD Schlüsselwerte Beispiel  
 Hier ist ein Beispiel für eine PublicOrganization im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-  "type": "PublicOrganization",  
-  "preferredLabel": "The Finnish Patent and Registration Office",  
-  "spatial": [  
-    "http://publications.europa.eu/resource/authority/atu/FIN"  
-  ],  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "type": "PublicOrganization",  
+    "preferredLabel": "The Finnish Patent and Registration Office",  
+    "spatial": [  
+        "http://publications.europa.eu/resource/authority/atu/FIN"  
+    ],  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### PublicOrganization NGSI-LD normalisiert Beispiel  
 Hier ist ein Beispiel für eine PublicOrganization im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
-  "type": "PublicOrganization",  
-  "preferredLabel": {  
-    "type": "string",  
-    "value": "The Finnish Patent and Registration Office"  
-  },  
-  "spatial": {  
-    "type": "array",  
-    "value": [  
-      "http://publications.europa.eu/resource/authority/atu/FIN"  
+    "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",  
+    "type": "PublicOrganization",  
+    "preferredLabel": {  
+        "type": "string",  
+        "value": "The Finnish Patent and Registration Office"  
+    },  
+    "spatial": {  
+        "type": "array",  
+        "value": [  
+            "http://publications.europa.eu/resource/authority/atu/FIN"  
+        ]  
+    },  
+    "@context": [  
+        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
     ]  
-  },  
-  "@context": [  
-    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"  
-  ]  
 }  
 ```  
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
 Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
