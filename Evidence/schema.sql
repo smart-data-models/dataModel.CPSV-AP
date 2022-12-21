@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Evidence of the subject dataModel.CPSV-AP for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Evidence_type AS ENUM ('Evidence');
+CREATE TABLE Evidence (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, evidenceType text, id text, identifier text, language json, location json, name text, owner json, relatedDocumentation json, seeAlso json, source text, type Evidence_type);
