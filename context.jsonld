@@ -1,5 +1,13 @@
 {
     "@context": {
+        "BusinessEvent": "https://smartdatamodels.org/dataModel.CPSV-AP/BusinessEvent",
+        "Cost": "https://smartdatamodels.org/dataModel.CPSV-AP/Cost",
+        "CriterionRequirement": "https://smartdatamodels.org/dataModel.CPSV-AP/CriterionRequirement",
+        "Evidence": "https://smartdatamodels.org/dataModel.CPSV-AP/Evidence",
+        "LifeEvent": "https://smartdatamodels.org/dataModel.CPSV-AP/LifeEvent",
+        "PublicOrganization": "https://smartdatamodels.org/dataModel.CPSV-AP/PublicOrganization",
+        "PublicService": "https://smartdatamodels.org/dataModel.CPSV-AP/PublicService",
+        "Rule": "https://smartdatamodels.org/dataModel.CPSV-AP/Rule",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
