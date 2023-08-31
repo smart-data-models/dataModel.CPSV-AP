@@ -52,7 +52,7 @@
                 },
                 "thematicArea": {
                     "type": "array",
-                    "description": "Property. Model:'cv:thematicArea'. This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment..",
+                    "description": "Property. Model:'cv:thematicArea'. This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment",
                     "items": {
                         "type": "string"
                     }
@@ -109,14 +109,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -129,14 +129,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -166,14 +166,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -186,14 +186,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -206,14 +206,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -226,14 +226,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
