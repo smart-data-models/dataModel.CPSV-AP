@@ -48,14 +48,14 @@
                     "items": {
                         "anyOf": [
                             {
-                                "description": "Property. Array of identifiers format of any NGSI entity.",
+                                "description": "Property. Array of identifiers format of any NGSI entity",
                                 "type": "string",
                                 "minLength": 1,
                                 "maxLength": 256,
                                 "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$"
                             },
                             {
-                                "description": "Property. Array of URIs format of any NGSI entity.",
+                                "description": "Property. Array of URIs format of any NGSI entity",
                                 "type": "string",
                                 "format": "uri"
                             }
