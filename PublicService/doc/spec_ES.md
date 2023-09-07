@@ -7,23 +7,30 @@
 [documento generado automáticamente](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Descripción global: **Un Servicio Público es un conjunto de actividades obligatorias o discrecionales realizadas, o que pueden ser realizadas, por o en nombre de una organización pública, financiadas públicamente y que surgen de una política pública.**  
+Descripción global: **Un Servicio Público es un conjunto de actividades obligatorias o discrecionales realizadas, o susceptibles de ser realizadas, por o en nombre de una organización pública, financiadas con fondos públicos y derivadas de políticas públicas.**  
 versión: 0.0.1  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
 ## Lista de propiedades  
 
-<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>  
-- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated[string]`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified[string]`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description[string]`: Una descripción de este artículo  - `follows[array]`: La propiedad de seguimiento vincula a un Servicio Público con la(s) Regla(s) bajo la cual opera. La definición de la clase Rule es muy amplia. En un caso típico, la autoridad competente que presta el servicio público también definirá las reglas que aplicarán sus propias políticas. El CPSV-AP es flexible para permitir una variación significativa en tal escenario.  . Model: [cpsv:follows](cpsv:follows)- `hasCompetentAuthority[*]`: Esta propiedad vincula un Servicio Público a un Organismo Público, que es el Agente responsable de la prestación del Servicio Público. El hecho de que el Organismo Público concreto preste el servicio público directamente o lo subcontrate no es relevante. El Organismo Público que es la Autoridad Competente del servicio es el responsable último de la gestión y prestación del servicio público. El término Autoridad Competente se define en la Directiva de Servicios (2006/123/CE) de la siguiente manera: "Todo organismo o autoridad que desempeñe una función de supervisión o regulación en un Estado miembro en relación con las actividades de servicios, incluidas, en particular, las autoridades administrativas, incluidos los tribunales que actúen como tales, los colegios profesionales y las asociaciones profesionales u otras organizaciones profesionales que, en el ejercicio de su autonomía jurídica, regulen de forma colectiva el acceso a las actividades de servicios o su ejercicio".  . Model: [cv:hasCompetentAuthority](cv:hasCompetentAuthority)- `hasContactPoint[array]`: Un punto de contacto para el servicio es casi siempre útil. El valor de esta propiedad, la información de contacto propiamente dicha, debe proporcionarse utilizando schema:ContactPoint. Tenga en cuenta que la información de contacto debe ser relevante para el Servicio Público, que puede no ser la misma que la información de contacto de la Autoridad Competente o de cualquier Participante.  . Model: [cpsv:hasContactPoint](cpsv:hasContactPoint)- `hasCost[array]`: La propiedad Tiene Coste vincula un Servicio Público a una o más instancias de la clase Coste. Indica los costes relacionados con la ejecución de un Servicio Público para el ciudadano o la empresa relacionados con la ejecución del Servicio Público concreto. Cuando el coste varía en función del canal a través del cual se accede al servicio, puede vincularse al canal utilizando la relación Si se accede a través de.  . Model: [cv:hasCost](cv:hasCost)- `hasCriterion[array]`: Vincula un servicio público a una clase que describe los criterios para necesitar o utilizar el servicio, como la residencia en un lugar determinado, ser mayor de cierta edad, etc. La clase Criterio se define en el Vocabulario de Criterios y Pruebas Fundamentales (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary).  . Model: [cv:hasCriterion](cv:hasCriterion)- `hasInput[array]`: La propiedad Has Input vincula un Servicio Público a una o más instancias de la clase Evidence. Un Servicio Público específico puede requerir la presencia de ciertas piezas de Evidencia para poder ser entregado. Si las pruebas requeridas para hacer uso de un servicio varían según el canal a través del cual se accede, entonces Has Input debe estar al nivel del Canal.  . Model: [cpsv:hasInput](cpsv:hasInput)- `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad representa un identificador emitido formalmente para el servicio público.  . Model: [dct:identifier](dct:identifier)- `isGroupedBy[array]`: Esta propiedad vincula el Servicio Público con el Evento. Varios Servicios Públicos pueden estar asociados a un Evento en particular y, del mismo modo, el mismo Servicio Público puede estar asociado a varios Eventos diferentes.  . Model: [cv:isGroupedBy](cv:isGroupedBy)- `keyword[array]`: Esta propiedad representa una palabra clave, término o frase para describir el Servicio Público.  . Model: [dcat:keyword](dcat:keyword)- `language[array]`: Esta propiedad representa la(s) lengua(s) en la(s) que está disponible el Servicio Público. Puede ser una o varias lenguas, por ejemplo en países con más de una lengua oficial. Los posibles valores de esta propiedad se describen en un vocabulario controlado (Lista de Autoridades Nombradas de Lenguas (NAL) de la Oficina Europea de Publicaciones),  . Model: [dct:language](dct:language)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name[string]`: El nombre de este artículo.  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `processingTime[string]`: El valor de esta propiedad es el tiempo (estimado) necesario para ejecutar un Servicio Público. La información real se proporciona utilizando la sintaxis ISO8601 para duraciones. Ejemplos: [5 años -> P5Y, 1 mes -> P1M, 3 días -> P3D, 2 días 4 horas -> P2DT4H].  . Model: [cv:processingTime](cv:processingTime)- `publicServiceType[array]`: Esta propiedad representa el Tipo de un Servicio Público tal y como se describe en un vocabulario controlado. Para indicar el Tipo, nos referimos a las funciones del gobierno para indicar la finalidad de una actividad gubernamental, a la que está destinado el servicio público.  . Model: [dct:type](dct:type)- `sector[array]`: Esta propiedad representa la industria o el sector con el que se relaciona un Servicio Público, o al que está destinado. Por ejemplo: medio ambiente, seguridad, vivienda. Tenga en cuenta que un mismo servicio público puede estar relacionado con varios sectores. Los posibles valores de esta propiedad se proporcionan como vocabulario controlado (Lista de códigos NACE:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html).  . Model: [cv:sector](cv:sector)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `spatial[array]`: Los posibles valores de esta propiedad se proporcionan como un vocabulario controlado (Lista de Autoridades Nombradas de Continentes MDR, Lista de Autoridades Nombradas de Países MDR, Lista de Autoridades Nombradas de Lugares MDR, Geonames: http://sws.geonames.org).  . Model: [cv:spatial](cv:spatial)- `status[string]`: Indica si un servicio público está activo, inactivo, en desarrollo, etc., según un vocabulario controlado (vocabulario de estado ADMS: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf).  . Model: [adms:status](adms:status)- `thematicArea[array]`: Esta propiedad representa el área temática de un servicio público tal y como se describe en un vocabulario controlado, por ejemplo, protección social, salud, ocio, cultura y religión, familia, asuntos económicos itinerantes, impuestos, personal, medio ambiente...  . Model: [cv:thematicArea](cv:thematicArea)- `type[string]`: Tiene que ser PublicService.  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
+<sup><sub>[*] Si no hay un tipo en un atributo es porque puede tener varios tipos o diferentes formatos/patrones</sub></sup>.  
+- `address[object]`: La dirección postal  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: El país. Por ejemplo, España  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
+	- `addressLocality[string]`: La localidad en la que se encuentra la dirección postal, y que está en la región  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
+	- `addressRegion[string]`: La región en la que se encuentra la localidad, y que está en el país  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `district[string]`: Un distrito es un tipo de división administrativa que, en algunos países, gestiona el gobierno local    
+	- `postOfficeBoxNumber[string]`: El número del apartado de correos para las direcciones de apartados postales. Por ejemplo, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
+	- `postalCode[string]`: El código postal. Por ejemplo, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
+	- `streetAddress[string]`: La dirección  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+- `alternateName[string]`: Un nombre alternativo para este artículo  - `areaServed[string]`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  . Model: [https://schema.org/Text](https://schema.org/Text)- `dataProvider[string]`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada  - `dateCreated[date-time]`: Fecha de creación de la entidad. Normalmente será asignada por la plataforma de almacenamiento  - `dateModified[date-time]`: Marca de tiempo de la última modificación de la entidad. Suele ser asignada por la plataforma de almacenamiento  - `description[string]`: Descripción de este artículo  - `follows[array]`: La propiedad de seguimiento vincula un Servicio Público a la(s) Norma(s) bajo la(s) cual(es) opera. La definición de la clase Rule es muy amplia. En un caso típico, la autoridad competente que presta el servicio público también definirá las reglas que aplicarán sus propias políticas. El CPSV-AP es flexible para permitir variaciones significativas en tal escenario.  . Model: [cpsv:follows](cpsv:follows)- `hasCompetentAuthority[*]`: Esta propiedad vincula un Servicio Público a una Organización Pública, que es el Agente responsable de la prestación del Servicio Público. El hecho de que el Organismo Público concreto preste el servicio público directamente o lo externalice no es relevante. El Organismo Público que es la Autoridad Competente del servicio es el responsable último de gestionar y prestar el servicio público. El término Autoridad Competente se define en la Directiva de Servicios (2006/123/CE) de la siguiente manera: "Todo organismo o autoridad que desempeñe en un Estado miembro una función de supervisión o regulación en relación con las actividades de servicios, incluidas, en particular, las autoridades administrativas, incluidos los órganos jurisdiccionales que actúen como tales, los colegios profesionales y las asociaciones profesionales u otras organizaciones profesionales que, en el ejercicio de su autonomía jurídica, regulen de forma colegiada el acceso a las actividades de servicios o su ejercicio".  . Model: [cv:hasCompetentAuthority](cv:hasCompetentAuthority)- `hasContactPoint[array]`: Un punto de contacto para el servicio es casi siempre útil. El valor de esta propiedad, la información de contacto propiamente dicha, debe proporcionarse utilizando schema:ContactPoint. Tenga en cuenta que la información de contacto debe ser relevante para el Servicio Público, que puede no ser la misma que la información de contacto de la Autoridad Competente o de cualquier Participante.  . Model: [cpsv:hasContactPoint](cpsv:hasContactPoint)- `hasCost[array]`: La propiedad Tiene Coste vincula un Servicio Público a una o más instancias de la clase Coste. Indica los costes relacionados con la ejecución de un Servicio Público para el ciudadano o empresa relacionados con la ejecución del Servicio Público en particular. Cuando el coste varía en función del canal a través del cual se accede al servicio, puede vincularse al canal utilizando la relación Si se accede a través de  . Model: [cv:hasCost](cv:hasCost)- `hasCriterion[array]`: Vincula un Servicio Público a una clase que describe los criterios para necesitar o utilizar el servicio, como residir en un lugar determinado, tener más de cierta edad, etc. La clase Criterio se define en el Vocabulario de Criterios Básicos y Pruebas Básicas (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary).  . Model: [cv:hasCriterion](cv:hasCriterion)- `hasInput[array]`: La propiedad Tiene Entrada vincula un Servicio Público a una o más instancias de la clase Evidencia. Un Servicio Público específico puede requerir la presencia de ciertas piezas de Evidencia para ser entregado. Si las pruebas necesarias para hacer uso de un servicio varían en función del canal a través del cual se accede a él, entonces Has Input debe estar al nivel del Canal  . Model: [cpsv:hasInput](cpsv:hasInput)- `id[*]`: Identificador único de la entidad  - `identifier[string]`: Esta propiedad representa un Identificador formalmente emitido para el Servicio Público  . Model: [dct:identifier](dct:identifier)- `isGroupedBy[array]`: Esta propiedad vincula el Servicio Público al Evento. Varios servicios públicos pueden estar asociados a un acontecimiento concreto y, del mismo modo, un mismo servicio público puede estar asociado a varios acontecimientos distintos.  . Model: [cv:isGroupedBy](cv:isGroupedBy)- `keyword[array]`: Esta propiedad representa una palabra clave, término o frase para describir el Servicio Público  . Model: [dcat:keyword](dcat:keyword)- `language[array]`: Esta propiedad representa la(s) lengua(s) en la(s) que está disponible el Servicio Público. Puede tratarse de una o varias lenguas, por ejemplo en países con más de una lengua oficial. Los posibles valores de esta propiedad se describen en un vocabulario controlado (Lista de Autoridades Nominadas en Lenguas (NAL) de la Oficina Europea de Publicaciones),  . Model: [dct:language](dct:language)- `location[*]`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon.  - `name[string]`: El nombre de este artículo  - `owner[array]`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios.  - `processingTime[date-time]`: El valor de esta propiedad es el tiempo (estimado) necesario para ejecutar un Servicio Público. La información real se proporciona utilizando la sintaxis ISO8601 para duraciones. Ejemplos: [5 años -> P5Y, 1 mes -> P1M, 3 días -> P3D, 2 días 4 horas -> P2DT4H].  . Model: [cv:processingTime](cv:processingTime)- `publicServiceType[array]`: Esta propiedad representa el Tipo de un Servicio Público tal y como se describe en un vocabulario controlado. Para indicar el Tipo, nos referimos a las funciones de gobierno para indicar la finalidad de una actividad de gobierno, a la que se destina el servicio público  . Model: [dct:type](dct:type)- `sector[array]`: Esta propiedad representa la industria o el sector con el que se relaciona o al que se dirige un Servicio Público. Por ejemplo: medio ambiente, seguridad, vivienda. Tenga en cuenta que un mismo Servicio Público puede estar relacionado con varios sectores. Los posibles valores de esta propiedad se proporcionan como vocabulario controlado (Lista de códigos NACE:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html)  . Model: [cv:sector](cv:sector)- `seeAlso[*]`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source[string]`: Secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen o la URL del objeto de origen.  - `spatial[array]`: Los posibles valores de esta propiedad se proporcionan como vocabulario controlado (Lista de autoridades designadas de los continentes MDR, Lista de autoridades designadas de los países MDR, Lista de autoridades designadas de los lugares MDR, Geonames: http://sws.geonames.org).  . Model: [cv:spatial](cv:spatial)- `status[string]`: Indica si un servicio público está activo, inactivo, en desarrollo, etc., según un vocabulario controlado (vocabulario de estado ADMS: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf).  . Model: [adms:status](adms:status)- `thematicArea[array]`: Esta propiedad representa el Área Temática de un Servicio Público tal y como se describe en un vocabulario controlado, por ejemplo protección social, sanidad, ocio, cultura y religión, familia, asuntos económicos viajeros, impuestos, personal, medio ambiente  . Model: [cv:thematicArea](cv:thematicArea)- `type[string]`: Tiene que ser PublicService  . Model: [https://schema.org/Text](https://schema.org/Text)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propiedades requeridas  
 - `description`  - `hasCompetentAuthority`  - `id`  - `identifier`  - `name`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Descripción del modelo de datos de las propiedades  
-Ordenados alfabéticamente (haga clic para ver los detalles)  
+## Descripción de las propiedades del modelo de datos  
+Ordenados alfabéticamente (pulse para más detalles)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -32,194 +39,254 @@ PublicService:
   description: 'A Public Service is a mandatory or discretionary set of activities performed, or able to be performed, by or on behalf of a public organisation, publicly funded and arise from public policy.'    
   properties:    
     address:    
-      description: 'The mailing address'    
+      description: The mailing address    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
+          description: 'The country. For example, Spain'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressCountry    
+            type: Property    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
+          description: 'The locality in which the street address is, and which is in the region'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressLocality    
+            type: Property    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
+          description: 'The region in which the locality is, and which is in the country'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/addressRegion    
+            type: Property    
+        district:    
+          description: 'A district is a type of administrative division that, in some countries, is managed by the local government'    
+          type: string    
+          x-ngsi:    
+            type: Property    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
+          description: 'The post office box number for PO box addresses. For example, 03578'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/postOfficeBoxNumber    
+            type: Property    
         postalCode:    
-          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
+          description: 'The postal code. For example, 24004'    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/https://schema.org/postalCode    
+            type: Property    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
+          description: The street address    
           type: string    
+          x-ngsi:    
+            model: https://schema.org/streetAddress    
+            type: Property    
+        streetNr:    
+          description: Number identifying a specific property on a public street    
+          type: string    
+          x-ngsi:    
+            type: Property    
       type: object    
       x-ngsi:    
         model: https://schema.org/address    
         type: Property    
     alternateName:    
-      description: 'An alternative name for this item'    
+      description: An alternative name for this item    
       type: string    
       x-ngsi:    
         type: Property    
     areaServed:    
-      description: 'The geographic area where a service or offered item is provided'    
+      description: The geographic area where a service or offered item is provided    
       type: string    
       x-ngsi:    
         model: https://schema.org/Text    
         type: Property    
     dataProvider:    
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     description:    
-      description: 'A description of this item'    
+      description: A description of this item    
       type: string    
       x-ngsi:    
         type: Property    
     follows:    
-      description: 'The follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario.'    
+      description: 'The follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. The CPSV-AP is flexible to allow for significant variation in such a scenario'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cpsv:follows    
         type: Relationship    
     hasCompetentAuthority:    
       anyOf:    
-        - description: 'Property. Array of identifiers format of any NGSI entity.'    
+        - description: Array of identifiers format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          x-ngsi:    
+            type: Property    
+        - description: Array of identifiers format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: `Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof''.'    
+          x-ngsi:    
+            type: Property    
+      description: 'This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: `Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organisations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof'''    
       x-ngsi:    
         model: cv:hasCompetentAuthority    
         type: Relationship    
     hasContactPoint:    
-      description: 'A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant.'    
+      description: 'A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cpsv:hasContactPoint    
         type: Relationship    
     hasCost:    
-      description: 'The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship.'    
+      description: 'The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cv:hasCost    
         type: Relationship    
     hasCriterion:    
-      description: 'Links a Public Service to a class that describes the criteria for needing or using the service, such as residency in a given location, being over a certain age etc. The Criterion class is defined in the Core Criterion and Core Evidence Vocabulary (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary).'    
+      description: 'Links a Public Service to a class that describes the criteria for needing or using the service, such as residency in a given location, being over a certain age etc. The Criterion class is defined in the Core Criterion and Core Evidence Vocabulary (https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-criterion-and-core-evidence-vocabulary)'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cv:hasCriterion    
         type: Relationship    
     hasInput:    
-      description: 'The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel.'    
+      description: 'The Has Input property links a Public Service to one or more instances of the Evidence class. A specific Public Service may require the presence of certain pieces of Evidence in order to be delivered. If the evidence required to make use of a service varies according to the channel through which it is accessed, then Has Input should be at the level of the Channel'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cpsv:hasInput    
         type: Relationship    
     id:    
-      anyOf: &publicservice_-_properties_-_owner_-_items_-_anyof    
-        - description: 'Property. Identifier format of any NGSI entity'    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: 'Property. Identifier format of any NGSI entity'    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
-      description: 'Unique identifier of the entity'    
+          x-ngsi:    
+            type: Property    
+      description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     identifier:    
-      description: 'This property represents a formally-issued Identifier for the Public Service.'    
+      description: This property represents a formally-issued Identifier for the Public Service    
       type: string    
       x-ngsi:    
         model: dct:identifier    
         type: Property    
     isGroupedBy:    
-      description: 'This property links the Public Service to the Event. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events.'    
+      description: 'This property links the Public Service to the Event. Several Public Services may be associated with a particular Event and, likewise, the same Public Service may be associated with several different Events'    
       items:    
         anyOf:    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+          - description: Array of identifiers format of any NGSI entity    
             maxLength: 256    
             minLength: 1    
             pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
             type: string    
-          - description: 'Property. Array of identifiers format of any NGSI entity.'    
+            x-ngsi:    
+              type: Property    
+          - description: Array of identifiers format of any NGSI entity    
             format: uri    
             type: string    
+            x-ngsi:    
+              type: Property    
       type: array    
       x-ngsi:    
         model: cv:isGroupedBy    
         type: Relationship    
     keyword:    
-      description: 'This property represents a keyword, term or phrase to describe the Public Service.'    
+      description: 'This property represents a keyword, term or phrase to describe the Public Service'    
       items:    
         type: string    
       type: array    
@@ -237,7 +304,7 @@ PublicService:
     location:    
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
       oneOf:    
-        - description: 'GeoProperty. Geojson reference to the item. Point'    
+        - description: Geojson reference to the item. Point    
           properties:    
             bbox:    
               items:    
@@ -256,9 +323,11 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Point'    
+          title: GeoJSON Point    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. LineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. LineString    
           properties:    
             bbox:    
               items:    
@@ -280,9 +349,11 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON LineString'    
+          title: GeoJSON LineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. Polygon'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. Polygon    
           properties:    
             bbox:    
               items:    
@@ -306,9 +377,11 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON Polygon'    
+          title: GeoJSON Polygon    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiPoint'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiPoint    
           properties:    
             bbox:    
               items:    
@@ -329,9 +402,11 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPoint'    
+          title: GeoJSON MultiPoint    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -355,9 +430,11 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiLineString'    
+          title: GeoJSON MultiLineString    
           type: object    
-        - description: 'GeoProperty. Geojson reference to the item. MultiLineString'    
+          x-ngsi:    
+            type: GeoProperty    
+        - description: Geojson reference to the item. MultiLineString    
           properties:    
             bbox:    
               items:    
@@ -383,49 +460,65 @@ PublicService:
           required:    
             - type    
             - coordinates    
-          title: 'GeoJSON MultiPolygon'    
+          title: GeoJSON MultiPolygon    
           type: object    
+          x-ngsi:    
+            type: GeoProperty    
       x-ngsi:    
         type: GeoProperty    
     name:    
-      description: 'The name of this item.'    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
-      description: 'A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)'    
+      description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *publicservice_-_properties_-_owner_-_items_-_anyof    
-        description: 'Property. Unique identifier of the entity'    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     processingTime:    
-      description: 'The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. Examples: [5 years -> P5Y, 1 month -> P1M, 3 days -> P3D, 2 days 4 hours -> P2DT4H].'    
+      description: 'The value of this property is the (estimated) time needed for executing a Public Service. The actual information is provided using the ISO8601 syntax for durations. Examples: [5 years -> P5Y, 1 month -> P1M, 3 days -> P3D, 2 days 4 hours -> P2DT4H]'    
       format: date-time    
       type: string    
       x-ngsi:    
         model: cv:processingTime    
         type: Property    
     publicServiceType:    
-      description: 'This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for.'    
+      description: 'This property represents the Type of a Public Service as described in a controlled vocabulary. For the indicating the Type, we are referring to the functions of government to indicate the purpose of a government activity, which the public service is intended for'    
       items:    
         enum:    
-          - 'Administrative formality'    
-          - 'Public Service'    
-          - 'Business Lifecycle'    
-          - 'Business Event'    
-          - 'Key Business Event'    
-          - 'Public Service Portfolio'    
-          - 'Catalogue of Public Services'    
-          - 'Competent Authority'    
+          - Administrative formality    
+          - Public Service    
+          - Business Lifecycle    
+          - Business Event    
+          - Key Business Event    
+          - Public Service Portfolio    
+          - Catalogue of Public Services    
+          - Competent Authority    
         type: string    
       type: array    
       x-ngsi:    
         model: dct:type    
         type: Property    
     sector:    
-      description: 'This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary (List of NACE codes:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html).'    
+      description: 'This property represents the industry or sector a Public Service relates to, or is intended for. For example: environment, safety, housing. Note that a single Public Service may relate to multiple sectors. The possible values for this property are provided as a controlled vocabulary (List of NACE codes:https://ec.europa.eu/competition/mergers/cases/index/nace_all.html)'    
       items:    
         type: string    
       type: array    
@@ -433,7 +526,7 @@ PublicService:
         model: cv:sector    
         type: Property    
     seeAlso:    
-      description: 'list of uri pointing to additional resources about the item'    
+      description: list of uri pointing to additional resources about the item    
       oneOf:    
         - items:    
             format: uri    
@@ -445,12 +538,12 @@ PublicService:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
     spatial:    
-      description: 'The possible values for this property are provided as a controlled vocabulary (MDR Continents Named Authority List , MDR Countries Named Authority List, MDR Places Named Authority List, Geonames: http://sws.geonames.org).'    
+      description: 'The possible values for this property are provided as a controlled vocabulary (MDR Continents Named Authority List , MDR Countries Named Authority List, MDR Places Named Authority List, Geonames: http://sws.geonames.org)'    
       items:    
         type: string    
       type: array    
@@ -458,7 +551,7 @@ PublicService:
         model: cv:spatial    
         type: Property    
     status:    
-      description: 'Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary (ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf).'    
+      description: 'Indicates whether a Public Service is active, inactive, under development etc. according to a controlled vocabulary (ADMS Status vocabulary: https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SW_v1-00_Taxonomies.rdf)'    
       enum:    
         - Completed    
         - Deprecated    
@@ -469,7 +562,7 @@ PublicService:
         model: adms:status    
         type: Property    
     thematicArea:    
-      description: 'This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment...'    
+      description: 'This property represents the Thematic Area of a Public Service as described in a controlled vocabulary, for instance social protection, health, recreation, culture and religion, family, traveling economic affairs, tax, staff, environment'    
       items:    
         type: string    
       type: array    
@@ -477,7 +570,7 @@ PublicService:
         model: cv:thematicArea    
         type: Property    
     type:    
-      description: 'It has to be PublicService.'    
+      description: It has to be PublicService    
       enum:    
         - PublicService    
       type: string    
@@ -493,7 +586,7 @@ PublicService:
     - hasCompetentAuthority    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/PublicService/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/PublicService/schema.json    
   x-model-tags: CEFAT4CITIES    
@@ -506,7 +599,7 @@ PublicService:
 <!-- 80-Examples -->  
 ## Ejemplo de carga útil  
 #### PublicService NGSI-v2 key-values Ejemplo  
-Aquí hay un ejemplo de un PublicService en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un PublicService en formato JSON-LD como key-values. Esto es compatible con NGSI-v2 cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -575,7 +668,7 @@ PublicService:
 ```  
 </details>  
 #### PublicService NGSI-v2 normalizado Ejemplo  
-Este es un ejemplo de un PublicService en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un PublicService en formato JSON-LD normalizado. Esto es compatible con NGSI-v2 cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -697,7 +790,7 @@ PublicService:
 ```  
 </details>  
 #### PublicService NGSI-LD key-values Ejemplo  
-Aquí hay un ejemplo de un PublicService en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un PublicService en formato JSON-LD como key-values. Esto es compatible con NGSI-LD cuando se utiliza `options=keyValues` y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -769,7 +862,7 @@ PublicService:
 ```  
 </details>  
 #### PublicService NGSI-LD normalizado Ejemplo  
-Este es un ejemplo de un PublicService en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
+He aquí un ejemplo de un PublicService en formato JSON-LD normalizado. Esto es compatible con NGSI-LD cuando no se utilizan opciones y devuelve los datos de contexto de una entidad individual.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -898,10 +991,10 @@ PublicService:
 ```  
 </details><!-- /80-Examples -->  
 <!-- 90-FooterNotes -->  
-El tipo de propiedad, cuyo URI es dct:type en la especificación CPSV-AP v2.2.1 se traduce a publicServiceType para resolver la ambigüedad con el tipo de propiedad del contexto central de ETSI NGSI-LD.  
+El tipo de propiedad, cuyo URI es dct:type en la especificación CPSV-AP v2.2.1 se traduce a publicServiceType para resolver la ambigüedad con el tipo de propiedad del contexto básico ETSI NGSI-LD.  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud  
+Consulte [FAQ 10](https://smartdatamodels.org/index.php/faqs/) para obtener una respuesta sobre cómo tratar las unidades de magnitud.  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  
