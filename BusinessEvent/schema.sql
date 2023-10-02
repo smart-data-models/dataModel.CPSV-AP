@@ -1,3 +1,3 @@
-/* (Beta) Export of data model BusinessEvent of the subject dataModel.CPSV-AP for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model BusinessEvent of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE BusinessEvent_type AS ENUM ('BusinessEvent');
-CREATE TABLE BusinessEvent (address json, alternateName text, areaServed text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, eventType json, id text, identifier text, location json, name text, owner json, relatedService json, seeAlso json, source text, type BusinessEvent_type);
+CREATE TABLE BusinessEvent (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, eventType JSON, identifier TEXT, name TEXT, owner JSON, relatedService JSON, source TEXT, type BusinessEvent_type);
