@@ -1,3 +1,3 @@
-/* (Beta) Export of data model Cost of the subject dataModel.CPSV-AP for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model Cost of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Cost_type AS ENUM ('Cost');
-CREATE TABLE Cost (address json, alternateName text, areaServed text, currency text, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, identifier text, ifAccessedThrough text, isDefinedBy json, location json, name text, owner json, seeAlso json, source text, type Cost_type, value text);
+CREATE TABLE Cost (address JSON, alternateName TEXT, areaServed TEXT, currency TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, identifier TEXT, ifAccessedThrough TEXT, isDefinedBy JSON, name TEXT, owner JSON, source TEXT, type Cost_type, value NUMERIC);
