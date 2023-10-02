@@ -1,3 +1,3 @@
-/* (Beta) Export of data model CriterionRequirement of the subject dataModel.CPSV-AP for a postgreSQL database. Pending translation of enumerations and multityped attributes */
+/* (Beta) Export of data model CriterionRequirement of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE CriterionRequirement_type AS ENUM ('CriterionRequirement');
-CREATE TABLE CriterionRequirement (address json, alternateName text, areaServed text, criterionReqType json, dataProvider text, dateCreated timestamp, dateModified timestamp, description text, id text, identifier text, location json, name text, owner json, seeAlso json, source text, type CriterionRequirement_type);
+CREATE TABLE CriterionRequirement (address JSON, alternateName TEXT, areaServed TEXT, criterionReqType JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, identifier TEXT, name TEXT, owner JSON, source TEXT, type CriterionRequirement_type);
