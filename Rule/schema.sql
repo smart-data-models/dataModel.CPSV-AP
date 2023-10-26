@@ -1,3 +1,3 @@
 /* (Beta) Export of data model Rule of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Rule_type AS ENUM ('Rule');
-CREATE TABLE Rule (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, identifier TEXT, implements JSON, language JSON, name TEXT, owner JSON, source TEXT, type Rule_type);
+CREATE TABLE Rule (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, identifier TEXT, implements JSON, language JSON, location JSON, name TEXT, owner JSON, seeAlso JSON, source TEXT, type Rule_type);
