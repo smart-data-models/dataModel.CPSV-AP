@@ -1,3 +1,3 @@
 /* (Beta) Export of data model LifeEvent of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE LifeEvent_type AS ENUM ('LifeEvent');
-CREATE TABLE LifeEvent (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, eventType JSON, identifier TEXT, name TEXT, owner JSON, relatedService JSON, source TEXT, type LifeEvent_type);
+CREATE TABLE LifeEvent (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, eventType JSON, id TEXT PRIMARY KEY, identifier TEXT, location JSON, name TEXT, owner JSON, relatedService JSON, seeAlso JSON, source TEXT, type LifeEvent_type);
