@@ -1,3 +1,3 @@
 /* (Beta) Export of data model Evidence of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE Evidence_type AS ENUM ('Evidence');
-CREATE TABLE Evidence (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, evidenceType TEXT, identifier TEXT, language JSON, name TEXT, owner JSON, relatedDocumentation JSON, source TEXT, type Evidence_type);
+CREATE TABLE Evidence (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, evidenceType TEXT, id TEXT PRIMARY KEY, identifier TEXT, language JSON, location JSON, name TEXT, owner JSON, relatedDocumentation JSON, seeAlso JSON, source TEXT, type Evidence_type);
