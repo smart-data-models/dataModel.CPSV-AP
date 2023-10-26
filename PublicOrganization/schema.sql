@@ -1,3 +1,3 @@
 /* (Beta) Export of data model PublicOrganization of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE PublicOrganization_type AS ENUM ('PublicOrganization');
-CREATE TABLE PublicOrganization (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, name TEXT, owner JSON, preferredLabel TEXT, source TEXT, spatial JSON, type PublicOrganization_type);
+CREATE TABLE PublicOrganization (address JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, preferredLabel TEXT, seeAlso JSON, source TEXT, spatial JSON, type PublicOrganization_type);
