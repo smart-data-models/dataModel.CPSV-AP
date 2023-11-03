@@ -1,2 +1,2 @@
-"id_", "type_", "preferredLabel_", "spatial__0_", "@context__0_"
-"urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2", "PublicOrganization", "The Finnish Patent and Registration Office", "http://publications.europa.eu/resource/authority/atu/FIN", "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld"
+"id_", "type_", "preferredLabel_", "spatial__0_", "@context__0_", "@context__1_"
+"urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2", "PublicOrganization", "The Finnish Patent and Registration Office", "http://publications.europa.eu/resource/authority/atu/FIN", "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld", "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"
