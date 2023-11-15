@@ -10,7 +10,7 @@
     "value": "DEFAULT NAME"
   },
   "criterionReqType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "Holding a ticket",
       "Being older than eighteen"
