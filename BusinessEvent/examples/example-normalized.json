@@ -2,7 +2,7 @@
   "id": "urn:ngsi-ld:CPSV-AP:BusinessEvent:4157c56b-754b-4f92-b4b1-0256b9a472a2",
   "type": "BusinessEvent",
   "identifier": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://europa.eu/youreurope/businessOntology#start-grow"
   },
   "name": {
@@ -10,7 +10,7 @@
     "value": "Start & grow"
   },
   "eventType": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "Registering Intellectual Property"
     ]
@@ -20,10 +20,9 @@
     "value": "This business event groups public services related to the registering inventions, patents, trademarks, copyrights."
   },
   "relatedService": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5"
     ]
   }
 }
-
