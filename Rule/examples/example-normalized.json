@@ -14,13 +14,13 @@
     "value": "The mayor of the municipality or his/her authorised representative checks whether the signature to be legalised corresponds to that of the person whose identity is being established. A signature on a white sheet of paper can never be legalised."
   },
   "language": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "http://publications.europa.eu/resource/authority/language/ENG"
     ]
   },
   "implements": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "urn:ngsi-ld:CPSV-AP:LegalResource:7e331270-8b9e-46d5-8371-81c8ad0cced5",
       "urn:ngsi-ld:CPSV-AP:LegalResource:7e331271-5a3e-2d9a-8371-81c8ad0cced5"
