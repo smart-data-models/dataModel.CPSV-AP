@@ -18,13 +18,13 @@
     "value": "Declaration of Oath"
   },
   "relatedDocumentation": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "https://www.prh.fi/stc/forms/tavaramerkin_rekisterointihakemus.pdf"
     ]
   },
   "language": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "http://publications.europa.eu/resource/authority/language/FIN",
       "http://publications.europa.eu/resource/authority/language/SWE"
