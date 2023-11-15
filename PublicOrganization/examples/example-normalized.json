@@ -2,11 +2,11 @@
   "id": "urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2",
   "type": "PublicOrganization",
   "preferredLabel": {
-    "type": "string",
+    "type": "Text",
     "value": "The Finnish Patent and Registration Office"
   },
   "spatial": {
-    "type": "array",
+    "type": "StructuredValue",
     "value": [
       "http://publications.europa.eu/resource/authority/atu/FIN"
     ]
