@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: Le numéro de la boîte postale pour les adresses de boîtes postales. Par exemple, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Le code postal. Par exemple, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'adresse de la rue  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numéro identifiant une propriété spécifique sur une voie publique    
 - `alternateName[string]`: Un nom alternatif pour ce poste  - `areaServed[string]`: La zone géographique où un service ou un article est offert  . Model: [https://schema.org/Text](https://schema.org/Text)- `currency[string]`: Cette propriété représente la devise dans laquelle le coût doit être payé et la valeur du coût est exprimée. Les valeurs possibles pour cette propriété sont décrites dans un vocabulaire contrôlé. Les vocabulaires contrôlés recommandés figurent dans la liste des autorités nommées (NAL) pour les monnaies de l'Office des publications européennes, conformément à la norme ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency).  . Model: [cv:currency](cv:currency)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Cette propriété représente une description en texte libre du coût.  . Model: [dct:description](dct:description)- `id[*]`: Identifiant unique de l'entité  - `identifier[string]`: Cette propriété représente un identifiant pour le coût. Cette propriété doit être un URI si elle est modélisée en RDF.  . Model: [dct:identifier](dct:identifier)- `ifAccessedThrough[string]`: Plage : "Canal". Lorsque le coût varie en fonction du canal utilisé, par exemple, si l'accès se fait par un service en ligne ou dans un lieu physique, le coût peut être lié au canal à l'aide de la propriété "Si accès par".  . Model: [cv:ifAccessedThrough](cv:ifAccessedThrough)- `isDefinedBy[array]`: Cette propriété lie la classe de coûts à une ou plusieurs instances de la classe d'organisation publique. Cette propriété indique quelle organisation publique est l'autorité compétente pour définir les coûts associés à la fourniture d'un service public particulier.  . Model: [cv:isDefinedBy](cv:isDefinedBy)- `location[*]`: Référence Geojson à l'élément. Il peut s'agir d'un point, d'une chaîne de ligne, d'un polygone, d'un point multiple, d'une chaîne de ligne multiple ou d'un polygone multiple.  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Il doit s'agir d'un coût  . Model: [https://schema.org/Text](https://schema.org/Text)- `value[number]`: Cette propriété représente une valeur numérique indiquant le montant du coût.  . Model: [cv:value](cv:value)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
@@ -400,11 +401,11 @@ Cost:
     - identifier    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Cost/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Cost/schema.json    
   x-model-tags: CEFAT4CITIES    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -439,7 +440,7 @@ Cost:
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
   "type": "Cost",  
   "identifier": {  
-    "type": "URL",  
+    "type": "Text",  
     "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
   },  
   "value": {  
@@ -455,7 +456,7 @@ Cost:
     "value": "Het wettigen van een handtekening is gratis."  
   },  
   "isDefinedBy": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
@@ -473,21 +474,21 @@ Cost:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-    "type": "Cost",  
-    "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
-    "value": 12.3,  
-    "currency": "EUR",  
-    "description": "Het wettigen van een handtekening is gratis.",  
-    "isDefinedBy": [  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
-    ],  
-    "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
-    "@context": [  
-        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+  "value": 12.3,  
+  "currency": "EUR",  
+  "description": "Het wettigen van een handtekening is gratis.",  
+  "isDefinedBy": [  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+  ],  
+  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
