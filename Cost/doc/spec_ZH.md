@@ -22,6 +22,7 @@
 	- `postOfficeBoxNumber[string]`: 用于邮政信箱地址的邮政信箱号码。例如：03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: 邮政编码。例如：24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: 街道地址  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: 在公共街道上标识特定房产的编号    
 - `alternateName[string]`: 该项目的替代名称  - `areaServed[string]`: 提供服务或提供物品的地理区域  . Model: [https://schema.org/Text](https://schema.org/Text)- `currency[string]`: 该属性表示需要支付的成本和成本值所使用的货币。该属性的可能值在受控词汇表中描述。推荐的受控词汇表列在欧洲出版局的货币命名机构列表（NAL）中，与 ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency) 一致  . Model: [cv:currency](cv:currency)- `dataProvider[string]`: 标识统一数据实体提供者的字符序列  - `dateCreated[date-time]`: 实体创建时间戳。通常由存储平台分配  - `dateModified[date-time]`: 实体最后一次修改的时间戳。通常由存储平台分配  - `description[string]`: 该属性表示对成本的自由文本描述  . Model: [dct:description](dct:description)- `id[*]`: 实体的唯一标识符  - `identifier[string]`: 该属性表示成本的标识符。如果使用 RDF 建模，该属性应为 URI  . Model: [dct:identifier](dct:identifier)- `ifAccessedThrough[string]`: 范围：'渠道'。如果费用因使用的渠道而异，例如，如果通过在线服务访问，而不是在实际地点访问，则可使用 "如果通过访问 "属性将费用与渠道联系起来。  . Model: [cv:ifAccessedThrough](cv:ifAccessedThrough)- `isDefinedBy[array]`: 该属性将成本类与公共组织类的一个或多个实例联系起来。该属性表示哪个公共组织是定义与提供特定公共服务相关的成本的主管机构。  . Model: [cv:isDefinedBy](cv:isDefinedBy)- `location[*]`: 项目的 Geojson 引用。它可以是点、线条字符串、多边形、多点、多线条字符串或多多边形  - `name[string]`: 该项目的名称  - `owner[array]`: 包含一个 JSON 编码字符序列的列表，其中引用了所有者的唯一 Ids  - `seeAlso[*]`: 指向有关该项目的其他资源的 uri 列表  - `source[string]`: 以 URL 形式给出实体数据原始来源的字符串。建议使用源提供者的完全合格域名或源对象的 URL  - `type[string]`: 必须是成本  . Model: [https://schema.org/Text](https://schema.org/Text)- `value[number]`: 该属性是一个数值，表示成本的金额。  . Model: [cv:value](cv:value)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 所需属性  
@@ -400,11 +401,11 @@ Cost:
     - identifier    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Cost/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Cost/schema.json    
   x-model-tags: CEFAT4CITIES    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -439,7 +440,7 @@ Cost:
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
   "type": "Cost",  
   "identifier": {  
-    "type": "URL",  
+    "type": "Text",  
     "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
   },  
   "value": {  
@@ -455,7 +456,7 @@ Cost:
     "value": "Het wettigen van een handtekening is gratis."  
   },  
   "isDefinedBy": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
@@ -473,21 +474,21 @@ Cost:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-    "type": "Cost",  
-    "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
-    "value": 12.3,  
-    "currency": "EUR",  
-    "description": "Het wettigen van een handtekening is gratis.",  
-    "isDefinedBy": [  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
-    ],  
-    "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
-    "@context": [  
-        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+  "value": 12.3,  
+  "currency": "EUR",  
+  "description": "Het wettigen van een handtekening is gratis.",  
+  "isDefinedBy": [  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+  ],  
+  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
