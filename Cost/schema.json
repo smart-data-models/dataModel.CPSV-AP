@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/schema",
-    "$schemaVersion": "0.0.1",
+    "$schemaVersion": "0.0.2",
     "$id": "https://smart-data-models.github.io/dataModel.CPSV-AP/Cost/schema.json",
     "title": "Smart Data models - Cost schema",
     "modelTags": "CEFAT4CITIES",
@@ -15,13 +15,37 @@
     ],
     "allOf": [
         {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
-        },
-        {
             "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
         },
         {
             "properties": {
+                "id": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/id"
+                },
+                "dateCreated": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/dateCreated"
+                },
+                "dateModified": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/dateModified"
+                },
+                "source": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/source"
+                },
+                "name": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/name"
+                },
+                "alternateName": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/alternateName"
+                },
+                "dataProvider": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/dataProvider"
+                },
+                "owner": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/owner"
+                },
+                "seeAlso": {
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons/properties/seeAlso"
+                },
                 "type": {
                     "type": "string",
                     "description": "Property. Model:'https://schema.org/Text'. It has to be Cost",
