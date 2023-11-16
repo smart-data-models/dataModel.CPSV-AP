@@ -17,11 +17,12 @@
 <sup><sub>[*] Se non c'è un tipo in un attributo è perché potrebbe avere diversi tipi o diversi formati/modelli</sub></sup>.  
 - `address[object]`: L'indirizzo postale  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Il paese. Ad esempio, la Spagna  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)  
 	- `addressLocality[string]`: La località in cui si trova l'indirizzo civico e che si trova nella regione  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)  
-	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
+	- `addressRegion[string]`: La regione in cui si trova la località, e che si trova nel Paese  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)  
 	- `district[string]`: Un distretto è un tipo di divisione amministrativa che, in alcuni paesi, è gestita dal governo locale.    
 	- `postOfficeBoxNumber[string]`: Il numero di casella postale per gli indirizzi di casella postale. Ad esempio, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)  
 	- `postalCode[string]`: Il codice postale. Ad esempio, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)  
 	- `streetAddress[string]`: L'indirizzo stradale  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)  
+	- `streetNr[string]`: Numero che identifica una proprietà specifica su una strada pubblica    
 - `alternateName[string]`: Un nome alternativo per questa voce  - `areaServed[string]`: L'area geografica in cui viene fornito il servizio o l'articolo offerto.  . Model: [https://schema.org/Text](https://schema.org/Text)- `currency[string]`: Questa proprietà rappresenta la valuta in cui il Costo deve essere pagato e il valore del Costo è espresso. I valori possibili per questa proprietà sono descritti in un vocabolario controllato. I vocabolari controllati raccomandati sono elencati nella Currencies Named Authority List (NAL) dell'Ufficio delle pubblicazioni europee, secondo la norma ISO 4217 (https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency).  . Model: [cv:currency](cv:currency)- `dataProvider[string]`: una sequenza di caratteri che identifica il fornitore dell'entità di dati armonizzata  - `dateCreated[date-time]`: Timestamp di creazione dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `dateModified[date-time]`: Timestamp dell'ultima modifica dell'entità. Di solito viene assegnato dalla piattaforma di archiviazione  - `description[string]`: Questa proprietà rappresenta una descrizione di testo libero del Costo  . Model: [dct:description](dct:description)- `id[*]`: Identificatore univoco dell'entità  - `identifier[string]`: Questa proprietà rappresenta un identificatore per il costo. Questa proprietà dovrebbe essere un URI se è modellata in RDF.  . Model: [dct:identifier](dct:identifier)- `ifAccessedThrough[string]`: Intervallo:'Canale'. Se il costo varia a seconda del canale utilizzato, ad esempio se l'accesso avviene tramite un servizio online rispetto all'accesso in una sede fisica, il costo può essere collegato al canale utilizzando la proprietà If Accessed Through.  . Model: [cv:ifAccessedThrough](cv:ifAccessedThrough)- `isDefinedBy[array]`: Questa proprietà collega la classe Costo con una o più istanze della classe Ente pubblico. Questa proprietà indica quale organizzazione pubblica è l'autorità competente per la definizione dei costi associati all'erogazione di un particolare servizio pubblico.  . Model: [cv:isDefinedBy](cv:isDefinedBy)- `location[*]`: Riferimento geojson all'elemento. Può essere un punto, una stringa di linea, un poligono, un multi-punto, una stringa di linea o un poligono multiplo.  - `name[string]`: Il nome di questo elemento  - `owner[array]`: Un elenco contenente una sequenza di caratteri codificata JSON che fa riferimento agli ID univoci dei proprietari.  - `seeAlso[*]`: elenco di uri che puntano a risorse aggiuntive sull'elemento  - `source[string]`: Una sequenza di caratteri che indica la fonte originale dei dati dell'entità come URL. Si consiglia di utilizzare il nome di dominio completamente qualificato del provider di origine o l'URL dell'oggetto di origine.  - `type[string]`: Deve essere Costo  . Model: [https://schema.org/Text](https://schema.org/Text)- `value[number]`: Questa proprietà rappresenta un valore numerico che indica l'importo del Costo  . Model: [cv:value](cv:value)<!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Proprietà richieste  
@@ -400,11 +401,11 @@ Cost:
     - identifier    
   type: object    
   x-derived-from: ""    
-  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2022 Contributors to Smart Data Models Program'    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2023 Contributors to Smart Data Models Program'    
   x-license-url: https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Cost/LICENSE.md    
   x-model-schema: https://smart-data-models.github.io/dataModel.CPSV-AP/Cost/schema.json    
   x-model-tags: CEFAT4CITIES    
-  x-version: 0.0.1    
+  x-version: 0.0.2    
 ```  
 </details>    
 <!-- /60-ModelYaml -->  
@@ -439,7 +440,7 @@ Cost:
   "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
   "type": "Cost",  
   "identifier": {  
-    "type": "URL",  
+    "type": "Text",  
     "value": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889"  
   },  
   "value": {  
@@ -455,7 +456,7 @@ Cost:
     "value": "Het wettigen van een handtekening is gratis."  
   },  
   "isDefinedBy": {  
-    "type": "array",  
+    "type": "StructuredValue",  
     "value": [  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
       "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
@@ -473,21 +474,21 @@ Cost:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
-    "type": "Cost",  
-    "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
-    "value": 12.3,  
-    "currency": "EUR",  
-    "description": "Het wettigen van een handtekening is gratis.",  
-    "isDefinedBy": [  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
-        "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
-    ],  
-    "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
-    "@context": [  
-        "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:CPSV-AP:Cost:a9cfc60c-f824-4d57-a2c1-afdc2a0c5889",  
+  "type": "Cost",  
+  "identifier": "http://cefat4cities.crosslang.com/content/Costa9cfc60cf8244d57a2c1afdc2a0c5889",  
+  "value": 12.3,  
+  "currency": "EUR",  
+  "description": "Het wettigen van een handtekening is gratis.",  
+  "isDefinedBy": [  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-8b9e-46d5-8371-81c6dd0cced5",  
+    "urn:ngsi-ld:CPSV-AP:PublicOrganisation:1656c45a-5a3e-2d9a-8371-81c6ad0cced5"  
+  ],  
+  "ifAccessedThrough": "urn:ngsi-ld:CPSV-AP:Channel:8566c45a-8b9e-46d5-8371-81c6dd0cced5",  
+  "@context": [  
+    "https://smart-data-models.github.io/dataModel.CPSV-AP/context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
