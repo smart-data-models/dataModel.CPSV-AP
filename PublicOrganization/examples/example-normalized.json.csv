@@ -1,2 +1,2 @@
 "id_", "type_", "preferredLabel__type_", "preferredLabel__value_", "spatial__type_", "spatial__value__0_"
-"urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2", "PublicOrganization", "string", "The Finnish Patent and Registration Office", "array", "http://publications.europa.eu/resource/authority/atu/FIN"
+"urn:ngsi-ld:CPSV-AP:PublicOrganization:4157c56b-754b-4f92-b4b1-0256b9a472d2", "PublicOrganization", "Text", "The Finnish Patent and Registration Office", "StructuredValue", "http://publications.europa.eu/resource/authority/atu/FIN"
