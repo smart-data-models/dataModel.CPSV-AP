@@ -24,31 +24,36 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "PublicService"
 subject = "dataModel.CPSV-AP"
-identifier = "{'type': 'Property', 'value': 'https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki'}"
+identifier = "https://www.yrityssuomi.fi/en/palvelu/-/palvelu/electronicapplicationforatrademark?region=helsinki"
 attribute = "identifier"
 value = identifier
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-keyword = {'type': 'Property', 'value': []}
+keyword = []
 attribute = "keyword"
 value = keyword
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-sector = {'type': 'Property', 'value': ['A1.1.5', 'A1.1.6', 'A1.1.9']}
+sector = ['A1.1.5', 'A1.1.6', 'A1.1.9']
 attribute = "sector"
 value = sector
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-thematicArea = {'type': 'Property', 'value': ['social', 'protection', 'health', 'recreation', 'culture and religion', 'family', 'traveling', 'economic', 'affairs', 'tax', 'staff', 'environment']}
+thematicArea = ['social', 'protection', 'health', 'recreation', 'culture and religion', 'family', 'traveling', 'economic', 'affairs', 'tax', 'staff', 'environment']
 attribute = "thematicArea"
 value = thematicArea
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
