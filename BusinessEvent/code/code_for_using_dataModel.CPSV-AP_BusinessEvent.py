@@ -24,25 +24,30 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "BusinessEvent"
 subject = "dataModel.CPSV-AP"
-identifier = "{'type': 'Property', 'value': 'http://europa.eu/youreurope/businessOntology#start-grow'}"
+identifier = "http://europa.eu/youreurope/businessOntology#start-grow"
 attribute = "identifier"
 value = identifier
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-eventType = {'type': 'Property', 'value': ['Registering Intellectual Property']}
+eventType = ['Registering Intellectual Property']
 attribute = "eventType"
 value = eventType
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-relatedService = {'type': 'Relationship', 'value': ['urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5']}
+relatedService = ['urn:ngsi-ld:CPSV-AP:PublicService:8566f45a-8b9e-46d5-8371-81c6dd0cced5']
 attribute = "relatedService"
 value = relatedService
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
