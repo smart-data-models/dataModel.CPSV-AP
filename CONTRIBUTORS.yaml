@@ -1,5 +1,40 @@
 description: This is a compilation list of all CONTRIBUTORS across different objects (data models) alphabetically ordered. All fields are non mandatory
 contributors:
+- name: Florian
+  surname: Barthelemy
+  mail:
+  organization: PwC EU Services
+  project:
+  comments:
+  year: 2024
+- name: jitse
+  surname: De cock
+  mail:
+  organization: PwC EU Services
+  project:
+  comments:
+  year: 2024
+- name: Emiel
+  surname: Dhont
+  mail:
+  organization: PwC EU Services
+  project:
+  comments:
+  year: 2024
+- name: Pavlina
+  surname: Fragkou
+  mail:
+  organization: European Commission
+  project:
+  comments:
+  year: 2024
+- name: Nathan  
+  surname: Ghesquière
+  mail:
+  organization: PwC EU Services
+  project:
+  comments:
+  year: 2024
 - name: Fernando
   surname: López
   mail: fernando.lopez@fiware.org
@@ -7,3 +42,17 @@ contributors:
   project: CEFAT4CITIES
   comments: 
   year: 2022
+- name: Anastasia
+  surname: Sofou
+  mail: 
+  organization: PwC EU Services
+  project: 
+  comments:
+  year: 2024
+- name: Emidio
+  surname: Stani
+  mail:
+  organization: PwC EU Services
+  project:
+  comments:
+  year: 2024

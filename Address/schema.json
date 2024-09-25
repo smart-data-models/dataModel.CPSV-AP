@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schemaVersion": "0.0.1",
+  "$id": "https://smart-data-models.github.io/dataModel.CPSV-AP/Address/schema.json",
+  "title": "Smart Data Models - CPSV-AP / Address",
+  "description": "Description of the data model Address from the version 3.2.0 of original CPSV-AP",
+  "modelTags": "",
+  "derivedFrom": "https://semiceu.github.io/CPSV-AP/releases/3.2.0/#Address",
+  "license": "https://smart-data-models.github.io/dataModel.CPSV-AP/Address/LICENSE.md",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "Address"
+          ],
+          "description": "Property. It must be equal to Address"
+        },
+         "addressArea": {
+          "type": "array",
+          "description": "Property. The name of a geographic area that groups Addresses. This would typically be part of a city, a neighbourhood or village, e.g. Montmartre. Address area is not an administrative unit. address ID Literal 0..*.. A globally unique identifier for each instance of an Address. The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary",
+          "items": {
+            "type": "string",
+            "description": "Property. Every item to describe an area"
+          }
+        },
+        "addressID": {
+          "type": "array",
+          "description": "Property. A globally unique identifier for each instance of an Address. A globally unique identifier for each instance of an Address. The INSPIRE method of representing addresses is very detailed, designed primarily for use in databases of addresses. Whilst data that is published in full conformance with the INSPIRE data structure can be made available using the Core Location Vocabulary the reverse is not true since the Core Vocabulary allows much greater flexibility. Many datasets that include address data as one piece of information about something else are likely to have that data in simpler formats. These might be tailored to the specific need of the dataset, follow a national norm, or make use of a standard like vCard",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual identifier"
+          }
+        },
+        "adminUnitL1": {
+          "type": "array",
+          "description": "Property. The name of the uppermost level of the address, almost always a country. Best practice is to use the ISO 3166-1 code but if this is inappropriate for the context, country names should be provided in a consistent manner to reduce ambiguity. For example, either write 'France' or 'FRA' consistently throughout the dataset and avoid mixing the two. The Country controlled vocabulary from the Publications Office can be reused for this",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual Unit identifier of Level 1"
+          }
+        },
+        "adminUnitL2": {
+          "type": "array",
+          "description": "Property. The name of a secondary level/region of the address, usually a county, state or other such area that typically encompasses several localities. Values could be a region or province, more granular than level 1",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual Unit identifier of Level 2"
+          }
+        },
+        "fullAddress": {
+          "type": "array",
+          "description": "Property. The complete address written as a string. Use of this property is not recommended as it will suffer any misunderstandings that might arise through the breaking up of an address into its component parts. This property is analogous to vCard's label property but with two important differences: (1) formatting is not assumed so that, unlike vCard label, it may not be suitable to print this on an address label, (2) vCard's label has a domain of vCard Address; the fullAddress property has no such restriction. An example of a full address is 'Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France'",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual element describing the full address"
+          }
+        },
+        "locatorName": {
+          "type": "array",
+          "description": "Property. Proper noun(s) applied to the real world entity identified by the locator. The key difference between a locator and a locator name is that the latter is a proper name and is unlikely to include digits. For example, 'Shumann, Berlaymont' is a meeting room within the European Commission headquarters for which locator name is more appropriate than locator.",
+          "items": {
+            "type": "string",
+            "description": "Property. Every locator name used"
+          }
+        },
+        "postCode": {
+          "type": "array",
+          "description": "Property. The code created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. Post codes are common elements in many countries' postal address systems. One of the many post codes of Paris is for example '75000'",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual postal code"
+          }
+        },
+        "postName": {
+          "type": "array",
+          "description": "Property. A name created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points. Usually a city, for example 'Paris'",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual postal name"
+          }
+        },
+        "poBox": {
+          "type": "array",
+          "description": "Property. A location designator for a postal delivery point at a post office, usually a number. INSPIRE's name for this is 'postalDeliveryIdentifier' for which it uses the locator designator property with a type attribute of that name. This vocabulary separates out the Post Office Box for greater independence of technology. An example post office box number is '9383'",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual postal box identifier"
+          }
+        },
+        "thoroughfare": {
+          "type": "array",
+          "description": "Property. The name of a passage or way through from one location to another.A thoroughfare is usually a street, but it might be a waterway or some other feature. For example, 'Avenue des Champs-Élysées'",
+          "items": {
+            "type": "string",
+            "description": "Property. Every individual name of a passage"
+          }
+        },
+  ],
+  "required": [
+    "id",
+    "type"
+  ]
+}
