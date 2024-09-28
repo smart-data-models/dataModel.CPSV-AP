@@ -24,7 +24,7 @@
           ],
           "description": "Property. It must be equal to Address"
         },
-         "addressArea": {
+        "addressArea": {
           "type": "array",
           "description": "Property. The name of a geographic area that groups Addresses. This would typically be part of a city, a neighbourhood or village, e.g. Montmartre. Address area is not an administrative unit. address ID Literal 0..*.. A globally unique identifier for each instance of an Address. The concept of adding a globally unique identifier for each instance of an address is a crucial part of the INSPIRE data spec. A number of EU countries have already implemented an ID (a UUID) in their Address Register/gazetteer, among them Denmark. OASIS xAL also includes an address identifier. It is the address Identifier that allows an address to be represented in a format other than INSPIRE whilst remaining conformant to the Core Vocabulary",
           "items": {
@@ -103,7 +103,9 @@
             "type": "string",
             "description": "Property. Every individual name of a passage"
           }
-        },
+        }
+      }
+    }
   ],
   "required": [
     "id",
