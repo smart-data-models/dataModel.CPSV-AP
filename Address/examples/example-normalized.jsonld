@@ -1,160 +1,142 @@
 {
-  "id": "urn:ngsi-ld:ThreePhaseAcMeasurement:ThreePhaseAcMeasurement:LV3_Ventilation",
-  "type": "ThreePhaseAcMeasurement",
-  "dateEnergyMeteringStarted": {
+  "id": "urn:ngsi-ld:Address:id:HCJC:40619188",
+  "dateCreated": {
     "type": "Property",
     "value": {
       "@type": "DateTime",
-      "@value": "2018-07-07T15:05:59.408Z"
+      "@value": "2001-02-13T19:16:04Z"
     }
   },
-  "refDevice": {
-    "type": "Relationship",
-    "object": [
-      "urn:ngsi-ld:Device:Device:eQL-EDF3GL-2006201705"
-    ]
+  "dateModified": {
+    "type": "Property",
+    "value": {
+      "@type": "DateTime",
+      "@value": "2001-03-04T03:30:45Z"
+    }
+  },
+  "source": {
+    "type": "Property",
+    "value": ""
   },
   "name": {
     "type": "Property",
-    "value": "HKAPK0200"
+    "value": "address name"
+  },
+  "alternateName": {
+    "type": "Property",
+    "value": ""
   },
   "description": {
     "type": "Property",
-    "value": "measurement corresponding to the ventilation machine rooms"
+    "value": "Address description"
   },
-  "totalActiveEnergyImport": {
+  "dataProvider": {
     "type": "Property",
-    "value": 150781.96448,
-    "observedAt": "2019-01-24T22:00:00.173Z"
+    "value": ""
   },
-  "totalReactiveEnergyImport": {
+  "owner": {
     "type": "Property",
-    "value": 20490.3392,
-    "observedAt": "2019-01-24T22:00:00.173Z"
+    "value": [
+      "urn:ngsi-ld:Address:items:TFSN:42356834",
+      "urn:ngsi-ld:Address:items:XAXT:64971602"
+    ]
   },
-  "totalActiveEnergyExport": {
+  "seeAlso": {
     "type": "Property",
-    "value": 1059.80176,
-    "observedAt": "2019-01-24T22:00:00.173Z"
+    "value": [
+      "urn:ngsi-ld:Address:items:BDLK:56181822"
+    ]
   },
-  "totalReactiveEnergyExport": {
-    "type": "Property",
-    "value": 93275.02176,
-    "observedAt": "2019-01-24T22:00:00.173Z"
+  "location": {
+    "type": "GeoProperty",
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        52.5209563,
+        13.3256918
+      ]
+    }
   },
-  "totalActivePower": {
-    "type": "Property",
-    "value": 31700.269531,
-    "observedAt": "2019-01-24T22:00:00.173Z"
-  },
-  "activePower": {
+  "address": {
     "type": "Property",
     "value": {
-      "L1": 11996.416016,
-      "L2": 9461.501953,
-      "L3": 10242.351562
-    },
-    "observedAt": "2019-01-24T22:00:00.173Z",
-    "measurementType": {
-      "type": "Property",
-      "value": "average"
-    },
-    "measurementInterval": {
-      "type": "Property",
-      "value": 1
+      "streetAddress": "Franklinstrasse",
+      "addressLocality": "Berlin",
+      "addressRegion": "Berlin",
+      "addressCountry": "germany",
+      "postalCode": "10583",
+      "postOfficeBoxNumber": "",
+      "streetNr": "13",
+      "district": ""
     }
   },
-  "totalReactivePower": {
+  "areaServed": {
     "type": "Property",
-    "value": -7830.332031,
-    "observedAt": "2019-01-24T22:00:00.173Z",
-    "measurementType": {
-      "type": "Property",
-      "value": "average"
-    }
+    "value": "berlin"
   },
-  "reactivePower": {
+  "type": "Address",
+  "addressArea": {
     "type": "Property",
-    "value": {
-      "L1": -2612.606934,
-      "L2": -2209.906006,
-      "L3": -3007.81958
-    }
+    "value": [
+      "S",
+      "Ra"
+    ]
   },
-  "totalApparentPower": {
+  "addressID": {
     "type": "Property",
-    "value": 36019.089844
+    "value": [
+      ""
+    ]
   },
-  "apparentPower": {
+  "adminUnitL1": {
     "type": "Property",
-    "value": {
-      "L1": 13201.412109,
-      "L2": 10755.304688,
-      "L3": 11941.094727
-    }
+    "value": [
+      "GER"
+    ]
   },
-  "powerFactor": {
+  "adminUnitL2": {
     "type": "Property",
-    "value": {
-      "L1": 0.908817,
-      "L2": 0.879906,
-      "L3": 0.859293
-    }
+    "value": [
+      "Berlin"
+    ]
   },
-  "displacementPowerFactor": {
+  "fullAddress": {
     "type": "Property",
-    "value": {
-      "L1": 0.978013,
-      "L2": 0.973317,
-      "L3": 0.960382
-    }
+    "value": [
+      "Berlin. Franklinstrasse 13"
+    ]
   },
-  "frequency": {
+  "locatorName": {
     "type": "Property",
-    "value": 50.020672
+    "value": [
+      ""
+    ]
   },
-  "current": {
+  "postCode": {
     "type": "Property",
-    "value": {
-      "L1": 56.126038,
-      "L2": 45.894356,
-      "L3": 50.872452,
-      "N": 0.0
-    }
+    "value": [
+      "10583"
+    ]
   },
-  "phaseVoltage": {
+  "postName": {
     "type": "Property",
-    "value": {
-      "L1": 234.961304,
-      "L2": 234.563477,
-      "L3": 235.354034
-    }
+    "value": [
+      "Berlin centre"
+    ]
   },
-  "phaseToPhaseVoltage": {
+  "poBox": {
     "type": "Property",
-    "value": {
-      "L12": 406.769196,
-      "L23": 407.081238,
-      "L31": 407.734558
-    }
+    "value": [
+      ""
+    ]
   },
-  "thdVoltage": {
+  "thoroughfare": {
     "type": "Property",
-    "value": {
-      "L1": 0.01471114,
-      "L2": 0.01600046,
-      "L3": 0.01541459
-    }
-  },
-  "thdCurrent": {
-    "type": "Property",
-    "value": {
-      "L1": 0.38497337,
-      "L2": 0.45807529,
-      "L3": 0.4938652
-    }
+    "value": [
+      ""
+    ]
   },
   "@context": [
-    "https://smartdatamodels.org/context.jsonld"
+     "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"
   ]
 }
