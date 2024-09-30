@@ -30,27 +30,27 @@ import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "Address"
 subject = "dataModel.CPSV-AP"
-addressID = ['']
+addressArea = {'type': 'Property', 'value': ['S', 'Ra']}
+attribute = "addressArea"
+value = addressArea
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+addressID = {'type': 'Property', 'value': ['']}
 attribute = "addressID"
 value = addressID
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-adminUnitL1 = ['GER']
+adminUnitL1 = {'type': 'Property', 'value': ['GER']}
 attribute = "adminUnitL1"
 value = adminUnitL1
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-adminUnitL2 = ['Berlin']
+adminUnitL2 = {'type': 'Property', 'value': ['Berlin']}
 attribute = "adminUnitL2"
 value = adminUnitL2
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-fullAddress = ['Berlin. Franklinstrasse 13']
-attribute = "fullAddress"
-value = fullAddress
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
