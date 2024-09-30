@@ -1,5 +1,6 @@
 {
     "@context": {
+        "Address": "https://smartdatamodels.org/dataModel.CPSV-AP/Address",
         "BusinessEvent": "https://smartdatamodels.org/dataModel.CPSV-AP/BusinessEvent",
         "Cost": "https://smartdatamodels.org/dataModel.CPSV-AP/Cost",
         "CriterionRequirement": "https://smartdatamodels.org/dataModel.CPSV-AP/CriterionRequirement",
@@ -9,9 +10,13 @@
         "PublicService": "https://smartdatamodels.org/dataModel.CPSV-AP/PublicService",
         "Rule": "https://smartdatamodels.org/dataModel.CPSV-AP/Rule",
         "address": "https://smartdatamodels.org/address",
+        "addressArea": "https://smartdatamodels.org/dataModel.CPSV-AP/addressArea",
         "addressCountry": "https://smartdatamodels.org/addressCountry",
+        "addressID": "https://smartdatamodels.org/dataModel.CPSV-AP/addressID",
         "addressLocality": "https://smartdatamodels.org/addressLocality",
         "addressRegion": "https://smartdatamodels.org/addressRegion",
+        "adminUnitL1": "https://smartdatamodels.org/dataModel.CPSV-AP/adminUnitL1",
+        "adminUnitL2": "https://smartdatamodels.org/dataModel.CPSV-AP/adminUnitL2",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
@@ -32,6 +37,7 @@
         "eventType": "https://smartdatamodels.org/dataModel.CPSV-AP/eventType",
         "evidenceType": "https://smartdatamodels.org/dataModel.CPSV-AP/evidenceType",
         "follows": "https://smartdatamodels.org/dataModel.CPSV-AP/follows",
+        "fullAddress": "https://smartdatamodels.org/dataModel.CPSV-AP/fullAddress",
         "hasCompetentAuthority": "https://smartdatamodels.org/dataModel.CPSV-AP/hasCompetentAuthority",
         "hasContactPoint": "https://smartdatamodels.org/dataModel.CPSV-AP/hasContactPoint",
         "hasCost": "https://smartdatamodels.org/dataModel.CPSV-AP/hasCost",
@@ -46,9 +52,13 @@
         "keyword": "https://smartdatamodels.org/dataModel.CPSV-AP/keyword",
         "language": "https://smartdatamodels.org/dataModel.CPSV-AP/language",
         "location": "ngsi-ld:location",
+        "locatorName": "https://smartdatamodels.org/dataModel.CPSV-AP/locatorName",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
+        "poBox": "https://smartdatamodels.org/dataModel.CPSV-AP/poBox",
+        "postCode": "https://smartdatamodels.org/dataModel.CPSV-AP/postCode",
+        "postName": "https://smartdatamodels.org/dataModel.CPSV-AP/postName",
         "postOfficeBoxNumber": "https://smartdatamodels.org/postOfficeBoxNumber",
         "postalCode": "https://smartdatamodels.org/postalCode",
         "preferredLabel": "https://smartdatamodels.org/dataModel.CPSV-AP/preferredLabel",
@@ -64,6 +74,7 @@
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "thematicArea": "https://smartdatamodels.org/dataModel.CPSV-AP/thematicArea",
+        "thoroughfare": "https://smartdatamodels.org/dataModel.CPSV-AP/thoroughfare",
         "type": "@type",
         "value": "ngsi-ld:hasValue"
     }
