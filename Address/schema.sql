@@ -1,0 +1,3 @@
+/* (Beta) Export of data model Address of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
+CREATE TYPE Address_type AS ENUM ('Address');
+CREATE TABLE Address (address JSON, addressArea JSON, addressID JSON, adminUnitL1 JSON, adminUnitL2 JSON, alternateName TEXT, areaServed TEXT, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, fullAddress JSON, id TEXT PRIMARY KEY, location JSON, locatorName JSON, name TEXT, owner JSON, poBox JSON, postCode JSON, postName JSON, seeAlso JSON, source TEXT, thoroughfare JSON, type Address_type);
