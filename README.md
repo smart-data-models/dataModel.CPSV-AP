@@ -1,9 +1,11 @@
 # dataModel.CPSV-AP
-These data models are mapped from [CPSV-AP v.2.2.1](https://ec.europa.eu/isa2/solutions/core-public-service-vocabulary-application-profile-cpsv-ap_en) standard.
+These data models are mapped from [CPSV-AP v.2.2.1](https://ec.europa.eu/isa2/solutions/core-public-service-vocabulary-application-profile-cpsv-ap_en) standard but for Address which is based on [3.0](https://joinup.ec.europa.eu/collection/semic-support-centre/solution/core-public-service-vocabulary-application-profile/release/320). The rest of the models will be updated soon.
 
 ### List of data models
 
 The following entity types are available:
+- [Address](https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Address/README.md). Description of the data model Address from the version 3.2.0 of original CPSV-AP
+
 - [BusinessEvent](https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/BusinessEvent/README.md). This class represents a Business Event, which specialises Event. A Business Event is a specific situation or event in the lifecycle of a business that fulfils one or more needs or (legal) obligations of that business at this specific point in time. A Business Event requires a set of public services to be delivered and consumed in order for the associated business need(s) or obligation(s) to be fulfilled. Business Events are defined within the context of a particular Member State. In other words, a Business Event groups together a number of public services that need to be delivered for completing that particular event.
 
 - [Cost](https://github.com/smart-data-models/dataModel.CPSV-AP/blob/master/Cost/README.md). The Cost class represents any costs related to the execution of a Public Service that the Agent consuming it needs to pay.
