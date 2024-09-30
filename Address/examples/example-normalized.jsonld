@@ -1,5 +1,6 @@
 {
   "id": "urn:ngsi-ld:Address:id:HCJC:40619188",
+  "type": "Address",
   "dateCreated": {
     "type": "Property",
     "value": {
@@ -74,7 +75,6 @@
     "type": "Property",
     "value": "berlin"
   },
-  "type": "Address",
   "addressArea": {
     "type": "Property",
     "value": [
@@ -137,6 +137,6 @@
     ]
   },
   "@context": [
-     "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"
   ]
 }

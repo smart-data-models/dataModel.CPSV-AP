@@ -1,5 +1,6 @@
 {
   "id": "urn:ngsi-ld:Address:id:HCJC:40619188",
+  "type": "Address",
   "dateCreated": {
     "type": "Date-Time",
     "value": "2001-02-13T19:16:04Z"
@@ -68,7 +69,6 @@
     "type": "Property",
     "value": "berlin"
   },
-  "type": "Address",
   "addressArea": {
     "type": "Array",
     "value": [

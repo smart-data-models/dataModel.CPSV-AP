@@ -1,5 +1,6 @@
 {
   "id": "urn:ngsi-ld:Address:id:HCJC:40619188",
+  "type": "Address",
   "dateCreated": "2001-02-13T19:16:04Z",
   "dateModified": "2001-03-04T03:30:45Z",
   "source": "",
@@ -32,10 +33,6 @@
     "district": ""
   },
   "areaServed": "berlin",
-  "type": [
-    "S",
-    "Ra"
-  ],
   "addressID": [
     ""
   ],
@@ -62,6 +59,11 @@
   ],
   "thoroughfare": [
     ""
+  ],
+  ,
+  "addressArea": [
+    "S",
+    "Ra"
   ],
   "@context": [
     "https://raw.githubusercontent.com/smart-data-models/dataModel.CPSV-AP/master/context.jsonld"
