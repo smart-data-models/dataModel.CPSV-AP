@@ -21,11 +21,11 @@
         "areaServed": "https://smartdatamodels.org/areaServed",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "criterionReqType": "https://smartdatamodels.org/dataModel.CPSV-AP/criterionReqType",
         "currency": "https://smartdatamodels.org/dataModel.CPSV-AP/currency",
@@ -51,7 +51,7 @@
         "isGroupedBy": "https://smartdatamodels.org/dataModel.CPSV-AP/isGroupedBy",
         "keyword": "https://smartdatamodels.org/dataModel.CPSV-AP/keyword",
         "language": "https://smartdatamodels.org/dataModel.CPSV-AP/language",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "locatorName": "https://smartdatamodels.org/dataModel.CPSV-AP/locatorName",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
@@ -70,12 +70,12 @@
         "seeAlso": "https://smartdatamodels.org/seeAlso",
         "source": "https://smartdatamodels.org/source",
         "spatial": "https://smartdatamodels.org/dataModel.CPSV-AP/spatial",
-        "status": "ngsi-ld:status",
+        "status": "https://uri.etsi.org/ngsi-ld/status",
         "streetAddress": "https://smartdatamodels.org/streetAddress",
         "streetNr": "https://smartdatamodels.org/streetNr",
         "thematicArea": "https://smartdatamodels.org/dataModel.CPSV-AP/thematicArea",
         "thoroughfare": "https://smartdatamodels.org/dataModel.CPSV-AP/thoroughfare",
         "type": "@type",
-        "value": "ngsi-ld:hasValue"
+        "value": "https://uri.etsi.org/ngsi-ld/hasValue"
     }
 }
