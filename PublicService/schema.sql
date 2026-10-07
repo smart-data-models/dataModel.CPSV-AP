@@ -1,5 +1,5 @@
 /* (Beta) Export of data model PublicService of the subject dataModel.CPSV-AP for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
-CREATE TYPE status_type AS ENUM ('Completed', 'Deprecated', 'UnderDevelopment', 'Withdrawn');
+CREATE TYPE PublicService_status_type AS ENUM ('Completed', 'Deprecated', 'UnderDevelopment', 'Withdrawn');
 CREATE TYPE PublicService_type AS ENUM ('PublicService');
 CREATE TABLE PublicService (
   "address" JSON,
@@ -29,7 +29,7 @@ CREATE TABLE PublicService (
   "seeAlso" JSON,
   "source" TEXT,
   "spatial" JSON,
-  "status" status_type,
+  "status" PublicService_status_type,
   "thematicArea" JSON,
   "type" PublicService_type
 );
